@@ -1,90 +1,90 @@
-# AIE2026 演習・宿題リポジトリ
+# AIE2026: repositorio de ejercicios y tareas
 
-AIエンジニアリング実践講座（AIE2026）の演習と宿題で使うリポジトリです。
-講座を通して、**AIエンジニアリングの学習を支援するエージェント**を少しずつ育てていきます。
+Este repositorio se usa para los ejercicios y las tareas de AI Engineering Pilot Course (AIE2026).
+A lo largo del curso, iremos desarrollando poco a poco un **agente que ayude a aprender ingeniería de IA**.
 
-## 想定する環境
+## Entorno previsto
 
-演習は **ブラウザだけで** 進められるように作っています。自分の PC への導入は不要です。
+Los ejercicios están diseñados para realizarlos **solo con el navegador**. No es necesario instalar nada en tu PC.
 
-| 使うもの | 用途 | 注意 |
+| Herramienta | Uso | Consideraciones |
 |---|---|---|
-| GitHub の **個人** アカウント | このリポジトリを fork し、作業ブランチと PR で提出する | 会社や学校が管理するアカウントでは Codespaces・Copilot が制限されることがあります |
-| GitHub Codespaces | 第1・3・5回などの開発環境。`.devcontainer/` の設定で Python 3.12・uv・Node.js が入ったコンテナが自動で用意されます | 個人アカウントの無料枠は月 120 コア時間（2 コアで約 60 時間）。**使い終わったら停止**してください |
-| GitHub Copilot（Free でよい） | コードの補完とチャット。第5回の発展課題では MCP クライアントとしても使います | Free は補完・チャットの回数に月の上限があります |
-| Gemini API（Google AI Studio の無料枠） | LLM の呼び出し。**個人**の Google アカウントでキーを発行し、Codespaces secret `GEMINI_API_KEY` で渡します | 無料枠には 1 分あたり・1 日あたりの上限があります（下の「前提と制約」） |
-| Google Colab（T4 GPU、無料枠） | 第2回の LoRA 学習だけに使います | GPU の利用時間に上限があります。終わったらランタイムを削除してください |
+| Cuenta **personal** de GitHub | Crear un fork de este repositorio y entregar el trabajo mediante una rama y un PR | Las cuentas administradas por empresas o centros educativos pueden tener restricciones para Codespaces y Copilot |
+| GitHub Codespaces | Entorno de desarrollo para Lecture 01, Lecture 03, Lecture 05 y otras sesiones. La configuración de `.devcontainer/` prepara automáticamente un contenedor con Python 3.12, uv y Node.js | La cuota gratuita de una cuenta personal es de 120 horas de núcleo al mes (unas 60 horas con 2 núcleos). **Detén el Codespace al terminar** |
+| GitHub Copilot (basta con Free) | Completar código y usar el chat. En la tarea avanzada de Lecture 05 también se usa como cliente MCP | Free tiene límites mensuales para las sugerencias de código y el chat |
+| Gemini API (cuota gratuita de Google AI Studio) | Llamar al LLM. Genera la clave con una cuenta **personal** de Google y pásala mediante el secret `GEMINI_API_KEY` de Codespaces | La cuota gratuita tiene límites por minuto y por día (véase «Supuestos y limitaciones» más abajo) |
+| Google Colab (GPU T4, cuota gratuita) | Se usa únicamente para el entrenamiento con LoRA de Lecture 02 | El tiempo de uso de la GPU es limitado. Elimina el entorno de ejecución al terminar |
 
-自分の PC で動かす場合は、Python 3.12 と [uv](https://docs.astral.sh/uv/) を入れて `uv sync --frozen` を実行し、環境変数 `GEMINI_API_KEY` を設定してください。
+Si prefieres trabajar en tu PC, instala Python 3.12 y [uv](https://docs.astral.sh/uv/), ejecuta `uv sync --frozen` y configura la variable de entorno `GEMINI_API_KEY`.
 
-## はじめに（第1回）
+## Primeros pasos (Lecture 01)
 
-1. このリポジトリを自分のアカウントに **fork** する
-2. [Google AI Studio](https://aistudio.google.com/apikey) で Gemini API キーを作る
-3. GitHub の **Settings → Codespaces → Secrets** に `GEMINI_API_KEY` を登録し、使う repository に自分の fork を選ぶ
-4. 自分の fork で **Code → Codespaces → Create codespace on main**
-5. ターミナルで動作確認
+1. Crea un **fork** de este repositorio en tu cuenta
+2. Crea una clave de Gemini API en [Google AI Studio](https://aistudio.google.com/apikey)
+3. Registra `GEMINI_API_KEY` en **Settings → Codespaces → Secrets** de GitHub y selecciona tu fork como repositorio autorizado
+4. En tu fork, selecciona **Code → Codespaces → Create codespace on main**
+5. Comprueba que funciona desde el terminal
 
 ```bash
 uv run pytest -q
-uv run python -m app.ask "LoRAとは何ですか？"
+uv run python -m app.ask "¿Qué es LoRA?"
 ```
 
-詳しい手順は [lectures/01/problem.md](lectures/01/problem.md) を見てください。
+Consulta las instrucciones detalladas en [lectures/01/problem.md](lectures/01/problem.md).
 
-## 構成
+## Estructura
 
 ```
-.devcontainer/   Codespaces の環境定義（Python 3.12、uv、Node.js。起動時に uv sync --frozen）
-.github/workflows/test.yml  PR ごとにテストを実行（fork では Actions タブで有効化が必要）
+.devcontainer/   Definición del entorno de Codespaces (Python 3.12, uv, Node.js; ejecuta uv sync --frozen al iniciar)
+.github/workflows/test.yml  Ejecuta las pruebas con cada PR (en un fork hay que habilitarlas en la pestaña Actions)
 app/
-  config.py      モデル名とAPIキーの読み込み
-  ask.py         第1回：LLMに質問する
-  tools.py       第3回：エージェントのツール（用語集の検索など）
-  agent.py       第3回：Pydantic AI の学習支援エージェント（第5回：--mcp で MCP 経由）
-  mcp_server.py  第5回：用語集を公開する MCP サーバー
-  mcp_servers.json 第5回：使う MCP サーバーの設定（mcpServers 形式）
+  config.py      Lectura del nombre del modelo y de la clave API
+  ask.py         Lecture 01: hacer preguntas al LLM
+  tools.py       Lecture 03: herramientas del agente (búsqueda en el glosario, etc.)
+  agent.py       Lecture 03: agente de apoyo al aprendizaje con Pydantic AI (Lecture 05: mediante MCP con --mcp)
+  mcp_server.py  Lecture 05: servidor MCP que ofrece el glosario
+  mcp_servers.json Lecture 05: configuración de los servidores MCP que se usarán (formato mcpServers)
 data/
-  glossary.json  講座の用語集
-  lectures/      各回の要点
+  glossary.json  Glosario del curso
+  lectures/      Puntos clave de cada sesión
 lectures/NN/
-  problem.md     その回の演習と宿題
-  answer.md      あなたが記入して提出するファイル
-notebooks/       第2回：Google Colab で動かす LoRA のノートブック（lora_format_tuning.ipynb）
-scripts/         補助スクリプト
-tests/           テスト（APIキー不要）
-pyproject.toml / uv.lock  依存パッケージとその固定版
+  problem.md     Ejercicios y tareas de la sesión
+  answer.md      Archivo que debes completar y entregar
+notebooks/       Lecture 02: cuaderno de LoRA para Google Colab (lora_format_tuning.ipynb)
+scripts/         Scripts auxiliares
+tests/           Pruebas (no requieren clave API)
+pyproject.toml / uv.lock  Dependencias y sus versiones fijadas
 ```
 
-## 提出のしかた
+## Cómo entregar el trabajo
 
-1. 回ごとに作業ブランチを作る（例：`git switch -c lec01`）
-2. 演習・宿題を行い、`lectures/NN/answer.md` に記入する
-3. push して、**自分の fork の中で** 作業ブランチ → `main` の PR を作る
+1. Crea una rama de trabajo para cada sesión (por ejemplo, `git switch -c lec01`)
+2. Realiza los ejercicios y la tarea, y completa `lectures/NN/answer.md`
+3. Haz push y crea un PR desde la rama de trabajo hacia `main` **dentro de tu propio fork**
 
-宿題は「基礎・実装・発展」の3レベルがあり、どれか1つに取り組めば完了です。
+Las tareas tienen tres niveles: «Básico», «Implementación» y «Avanzado». Basta con realizar uno de ellos para completar la tarea.
 
-## 前提と制約
+## Supuestos y limitaciones
 
-- **依存パッケージの版は固定**しています（`uv.lock`。Python 3.12、pydantic-ai-slim 2.57.0、google-genai 2.31.0）。講座の期間中は上げません。`uv sync --frozen` でそのまま入れてください。
-- **既定のモデルは `gemini-3.5-flash-lite`** です。環境変数 `AIE_MODEL` で切り替えられます（下の「モデルの切り替え」）。ほかのモデルや自前契約の API を使ってもかまいません
-- **Gemini API の無料枠にはレート制限**があります。エージェント（第3回以降）は 1 つの質問で LLM を複数回呼ぶので、第1回より早く上限に達します。`レート制限に達しました` と出たら 1 分ほど待ってください。`モデルが混み合っています（503）` が続くときは `AIE_MODEL=gemini-3.1-flash-lite` を試してください
-- **API キーは環境変数 `GEMINI_API_KEY` だけ**で渡します。コード・コミット・チャットに貼らないでください。漏れたら AI Studio で削除して作り直します
-- Codespaces からインターネットへは出られますが、外から Codespaces の中へは接続できません（ポート転送は既定で非公開）。第5回の MCP サーバーは Codespaces の中で動かします
-- テスト（`uv run pytest -q`）は API キーなしで動きます（LLM を呼ばない TestModel を使用）
+- **Las versiones de las dependencias están fijadas** (`uv.lock`: Python 3.12, pydantic-ai-slim 2.57.0, google-genai 2.31.0). No se actualizarán durante el curso. Instálalas con `uv sync --frozen`.
+- **El modelo predeterminado es `gemini-3.5-flash-lite`**. Puedes cambiarlo con la variable de entorno `AIE_MODEL` (véase «Cambiar de modelo» más abajo). También puedes usar otros modelos o una API contratada por tu cuenta
+- **La cuota gratuita de Gemini API tiene límites de uso**. Los agentes (a partir de Lecture 03) llaman al LLM varias veces por pregunta, por lo que alcanzan el límite antes que en Lecture 01. Si aparece `Se ha alcanzado el límite de uso`, espera aproximadamente 1 minuto. Si se repite `El modelo está saturado (503)`, prueba con `AIE_MODEL=gemini-3.1-flash-lite`
+- **Pasa la clave API únicamente mediante la variable de entorno `GEMINI_API_KEY`**. No la pegues en el código, en commits ni en el chat. Si se filtra, elimínala en AI Studio y crea otra
+- Codespaces puede acceder a Internet, pero no se puede acceder a su interior desde fuera (el reenvío de puertos es privado de forma predeterminada). El servidor MCP de Lecture 05 se ejecuta dentro de Codespaces
+- Las pruebas (`uv run pytest -q`) funcionan sin clave API (usan TestModel, que no llama al LLM)
 
-## 守ってほしいこと
+## Normas que debes respetar
 
-- **APIキーをコードやコミットに書かない。** Codespaces secret で渡します
-- **使い終わったら Codespaces を停止する。** 無料枠を使い切ると起動できなくなります
-- AIツール（Copilot など）は使ってかまいません。提案されたコードは、読んで理解してから採用してください
+- **No escribas claves API en el código ni en los commits.** Pásalas mediante un secret de Codespaces
+- **Detén Codespaces al terminar.** Si agotas la cuota gratuita, no podrás iniciarlo
+- Puedes usar herramientas de IA como Copilot. Lee y comprende el código que proponen antes de incorporarlo
 
-## モデルの切り替え
+## Cambiar de modelo
 
-既定モデルは `gemini-3.5-flash-lite` です。環境変数 `AIE_MODEL` で切り替えられます。
+El modelo predeterminado es `gemini-3.5-flash-lite`. Puedes cambiarlo con la variable de entorno `AIE_MODEL`.
 
 ```bash
-AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
+AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "¿Qué es LoRA?"
 ```
 
-無料枠には1分あたり・1日あたりのリクエスト上限があります。上限は [Gemini API のレート制限のページ](https://ai.google.dev/gemini-api/docs/rate-limits) で確認してください。
+La cuota gratuita tiene límites de solicitudes por minuto y por día. Consulta los límites en la [página de límites de uso de Gemini API](https://ai.google.dev/gemini-api/docs/rate-limits).

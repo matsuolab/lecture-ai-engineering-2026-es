@@ -1,94 +1,94 @@
-# 第1回 演習・宿題：開発環境を整え、LLMに質問する
+# Lecture 01: ejercicios y tarea — preparar el entorno de desarrollo y hacer preguntas al LLM
 
-## この回のゴール
+## Objetivos de esta sesión
 
-- 自分の fork を Codespaces で開き、Gemini API を呼び出せる
-- GitHub Copilot でコードを少し直せる
-- 作業ブランチから PR を出して提出できる（以降の回もこの流れで提出する）
+- Abrir tu fork en Codespaces y llamar a Gemini API
+- Hacer pequeños cambios en el código con GitHub Copilot
+- Entregar el trabajo mediante un PR desde tu rama de trabajo (seguiremos este procedimiento en las demás sesiones)
 
-## 準備するもの
+## Qué necesitas
 
-- GitHub の個人アカウント（会社が管理するアカウントは、組織の設定で Codespaces や Copilot が使えないことがあります）
-- Google の個人アカウント（会社の Google Workspace アカウントは、管理者の設定で AI Studio が使えないことがあります）
+- Una cuenta personal de GitHub (en las cuentas administradas por empresas, la configuración de la organización puede impedir el uso de Codespaces o Copilot)
+- Una cuenta personal de Google (en las cuentas corporativas de Google Workspace, la configuración del administrador puede impedir el uso de AI Studio)
 
-## 演習（45分）
+## Ejercicios (45 minutos)
 
-### 1. 講座 repo を fork する
+### 1. Crear un fork del repositorio del curso
 
-講座 repo の右上の **Fork** から、自分のアカウントに fork を作ります。以降の作業はすべて自分の fork で行います。
+Usa **Fork**, en la esquina superior derecha del repositorio del curso, para crear un fork en tu cuenta. A partir de ahora, trabajarás siempre en tu propio fork.
 
-### 2. Gemini API キーを発行する
+### 2. Generar una clave de Gemini API
 
-[Google AI Studio](https://aistudio.google.com/apikey) で API キーを作成し、コピーします。
+Crea una clave API en [Google AI Studio](https://aistudio.google.com/apikey) y cópiala.
 
-> APIキーは秘密情報です。コードやチャット、コミットに貼らないでください。漏れた場合は AI Studio でキーを削除し、作り直してください。
+> La clave API es información secreta. No la pegues en el código, en el chat ni en commits. Si se filtra, elimínala en AI Studio y crea otra.
 
-### 3. Codespaces secret に登録する
+### 3. Registrarla como secret de Codespaces
 
-GitHub の **Settings → Codespaces → Secrets → New secret** で次のように登録します。
+En **Settings → Codespaces → Secrets → New secret** de GitHub, introduce lo siguiente.
 
 - Name: `GEMINI_API_KEY`
-- Value: 手順2のキー
-- Repository access: **自分の fork** を選ぶ
+- Value: la clave del paso 2
+- Repository access: selecciona **tu propio fork**
 
-> Codespaces を起動する前に登録してください。起動後に登録した場合は、Codespaces の再起動が必要です。
+> Registra el secret antes de iniciar Codespaces. Si lo registras después, tendrás que reiniciar Codespaces.
 
-### 4. Codespaces を起動する
+### 4. Iniciar Codespaces
 
-自分の fork で **Code → Codespaces → Create codespace on main**。初回は環境の準備に数分かかります。ターミナルで次を実行し、テストが通ることを確認します。
+En tu fork, selecciona **Code → Codespaces → Create codespace on main**. La primera preparación del entorno tarda unos minutos. Ejecuta lo siguiente en el terminal y comprueba que las pruebas pasan.
 
 ```bash
 uv run pytest -q
 ```
 
-### 5. 素のLLMに質問する
+### 5. Hacer preguntas al LLM sin herramientas
 
 ```bash
-uv run python -m app.ask "LoRAとは何ですか？"
-uv run python -m app.ask "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+uv run python -m app.ask "¿Qué es LoRA?"
+uv run python -m app.ask "¿Qué son los «3 niveles» de las tareas del curso AIE2026?"
 ```
 
-1つ目は一般的な用語なので、おおむね正しい答えが返ります。2つ目は講座に固有の「宿題の3レベル」について質問します。素のLLMは講座のことを知らないため、「分からない」と答えるか、一般論でもっともらしく答えます。正しい内容は `data/glossary.json` の `homework-levels` にあります。モデルの答えと比べてみましょう。
+La primera pregunta trata sobre un término general, así que la respuesta debería ser bastante correcta. La segunda pregunta trata sobre los «3 niveles de las tareas», algo específico del curso. Como el LLM sin herramientas no conoce el curso, puede responder «No lo sé» o dar una explicación general que suene convincente. La información correcta está en `homework-levels`, dentro de `data/glossary.json`. Compárala con la respuesta del modelo.
 
-余裕があれば、ほかの講座に固有の質問も試してください。同じ質問でも実行ごとに答えが変わること、知らないことでも確信を持って答えることがあることに注目しましょう。
+Si tienes tiempo, prueba otras preguntas específicas del curso. Observa que la respuesta a una misma pregunta puede cambiar en cada ejecución y que el modelo puede responder con seguridad incluso cuando no sabe algo.
 
 ```bash
-uv run python -m app.ask "AIE2026の講座で使う「lecNN-start タグ」とは何ですか？"
-uv run python -m app.ask "AIE2026の第2回では何を学びますか？"
+uv run python -m app.ask "¿Qué es la «etiqueta lecNN-start» que se usa en el curso AIE2026?"
+uv run python -m app.ask "¿Qué se aprende en Lecture 02 del curso AIE2026?"
 ```
 
-### 6. Copilot でトークン数を表示させる
+### 6. Mostrar el número de tokens con Copilot
 
-`app/ask.py` の `TODO(第1回 演習)` の場所で、入力トークン数と出力トークン数を表示するよう改修します。Copilot の補完やチャットを使ってかまいません。提案されたコードは、読んで理解してから採用してください。
+Modifica `app/ask.py` en el lugar marcado como `TODO(Lecture 01: ejercicio)` para que muestre el número de tokens de entrada y de salida. Puedes usar las sugerencias o el chat de Copilot. Lee y comprende el código propuesto antes de incorporarlo.
 
-### 7. ブランチを作って PR を出す
+### 7. Crear una rama y un PR
 
 ```bash
 git switch -c lec01
-# lectures/01/answer.md を書く
+# Completa lectures/01/answer.md
 git add -A
-git commit -m "第1回 演習"
+git commit -m "Lecture 01 exercises"
 git push -u origin lec01
 ```
 
-GitHub の自分の fork で、`lec01` → `main` の PR を作成します。**base repository が自分の fork になっていることを確認してください**（講座 repo に PR を出さないこと）。
+En tu fork de GitHub, crea un PR de `lec01` hacia `main`. **Comprueba que base repository sea tu propio fork** (no envíes el PR al repositorio del curso).
 
-### 8. Codespaces を停止する
+### 8. Detener Codespaces
 
-左下の「Codespaces」→ **Stop Current Codespace**。起動したままだと無料枠を消費し続けます。
+Selecciona «Codespaces» en la esquina inferior izquierda → **Stop Current Codespace**. Si lo dejas en ejecución, seguirá consumiendo tu cuota gratuita.
 
-## 宿題（どれか1つで完了）
+## Tarea (basta con completar un nivel)
 
-| レベル | 内容 |
+| Nivel | Contenido |
 |---|---|
-| 基礎 | 同じ質問を3回ずつ、モデルを変えて（`AIE_MODEL` 環境変数）、または temperature を変えて実行し、回答の違いを answer.md にまとめる |
-| 実装 | `app/ask.py` を改修し、会話履歴を保ったまま続けて質問できるようにする |
-| 発展 | 応答時間とトークン数を計測し、複数のモデルや質問で比較する。無料枠のレート制限との関係も考察する |
+| Básico | Ejecuta cada pregunta 3 veces, cambia de modelo (con la variable de entorno `AIE_MODEL`) o cambia temperature, y resume las diferencias entre las respuestas en answer.md |
+| Implementación | Modifica `app/ask.py` para poder seguir haciendo preguntas conservando el historial de conversación |
+| Avanzado | Mide el tiempo de respuesta y el número de tokens, y compara varios modelos o preguntas. Analiza también su relación con los límites de uso de la cuota gratuita |
 
-モデルの切り替え例：
+Ejemplo de cambio de modelo:
 
 ```bash
-AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
+AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "¿Qué es LoRA?"
 ```
 
-temperature を変えるには、`generate_content` の `config` 引数を調べてみましょう。
+Para cambiar temperature, investiga el argumento `config` de `generate_content`.
