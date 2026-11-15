@@ -32,6 +32,32 @@ uv run python -m app.ask "¿Qué es LoRA?"
 
 Consulta las instrucciones detalladas en [lectures/01/problem.md](lectures/01/problem.md).
 
+<a id="lecture-05-rag"></a>
+
+## Lecture 05: buscar en los materiales de clase
+
+**Estado de publicación:** las instrucciones y la plantilla de respuestas ya están traducidas. Los materiales en español, su índice de búsqueda y la activación del código de Lecture 05 en `main` siguen pendientes. Los comandos de esta sección se aplican después de la actualización de datos y código.
+
+Las instrucciones de los ejercicios y la tarea están en [lectures/05/problem.md](lectures/05/problem.md). Escribe los resultados en [lectures/05/answer.md](lectures/05/answer.md).
+
+La actualización pendiente incorporará `data/rag_data/index.sqlite3`, una base de datos con las representaciones vectoriales de las 214 páginas de los materiales principales de Lecture 01–03. Después de incorporarla junto con el código, configura `GEMINI_API_KEY` y sincroniza las dependencias desde la raíz del repositorio para probar las búsquedas y las respuestas. La vectorización de las preguntas y la generación de respuestas usan la API.
+
+```bash
+uv sync --frozen
+uv run python -m app.retrieval "LoRA QLoRA diferencias"
+uv run python -m app.agent --trace "¿Cuál es la diferencia entre LoRA y QLoRA?"
+uv run python -m app.agent --graph --trace "¿Cuál es la diferencia entre LoRA y QLoRA?"
+```
+
+Si cambias el texto de los materiales o los ajustes de vectorización, crea una base de datos experimental. En el terminal donde definas `AIE_RAG_DB`, tanto la creación como la búsqueda usarán esa ruta.
+
+```bash
+export AIE_RAG_DB="$PWD/.cache/rag/custom.sqlite3"
+uv run python -m scripts.build_rag_index
+```
+
+Para reconstruir esa misma base experimental, añade `--rebuild` al comando de creación. Ejecuta `unset AIE_RAG_DB` para volver a la base que se distribuya con esa actualización. Tree (`--tree`) y el modo de contexto completo (`--full-context`) no necesitan la base de datos de búsqueda.
+
 ## Estructura
 
 ```
@@ -56,7 +82,8 @@ lectures/NN/
   problem.md     Ejercicios y tareas de la sesión
   answer.md      Archivo que debes completar y entregar
 notebooks/       Lecture 02: cuaderno de LoRA para Google Colab (lora_format_tuning.ipynb)
-scripts/         Scripts auxiliares
+scripts/
+  make_sft_dataset.py Lecture 02: preparar datos de entrenamiento
 tests/           Pruebas (no requieren clave API)
 pyproject.toml / uv.lock  Dependencias y sus versiones fijadas
 ```
