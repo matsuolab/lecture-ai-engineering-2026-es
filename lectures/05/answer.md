@@ -1,7 +1,5 @@
 # Lecture 05: respuestas
 
-**Pendiente de ejecución:** esta plantilla está traducida; los materiales en español, su índice de búsqueda y la activación del código de Lecture 05 siguen pendientes. Complétala con tus resultados después de la actualización de datos y código y de realizar los ejercicios.
-
 ## Ejercicios
 
 - Modelo de respuesta (`[model]` al ejecutar):

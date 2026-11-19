@@ -1,6 +1,6 @@
 # Lecture 05: ejercicios y tarea — responder buscando en los materiales de clase
 
-**Estado de publicación:** estas instrucciones y la plantilla de respuestas ya están traducidas. Los materiales en español, su índice de búsqueda y la activación del código de Lecture 05 en `main` siguen pendientes. Realiza los comandos y ejercicios siguientes después de la actualización de datos y código.
+La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca actualmente 6 documentos y 342 páginas. Quedan pendientes la orientación inicial y los ejercicios de Lecture 01 y 02.
 
 ## Objetivos de esta sesión
 
@@ -12,27 +12,25 @@ Usaremos la estructura de «modelo + bucle + herramientas» de Lecture 03 y camb
 
 ## Materiales y código
 
-Los cuatro enlaces de datos apuntan a la versión japonesa de referencia, fijada en la revisión `1ce722c2816b70ef62891a6378b2478af555e3fd`; los materiales y el índice en español están pendientes. Los cinco enlaces de código muestran el código preparado en la rama `feat/lecture05-rag-update-20261115`, pendiente de activación en `main`.
-
 | Archivo | Contenido |
 |---|---|
-| [data/rag_data/lectures.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/lectures.json) | Títulos y textos organizados por sesión, capítulo y página. Cada página se usa como un fragmento |
-| [data/rag_data/tree.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/tree.json) | Jerarquía de materiales, capítulos y páginas |
-| [data/rag_data/graph.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/graph.json) | Nodos de páginas, términos y otros elementos, y sus relaciones |
-| [data/rag_data/index.sqlite3](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/index.sqlite3) | Base de datos de búsqueda con las 214 páginas de los materiales principales de Lecture 01–03 |
-| [scripts/build_rag_index.py](https://github.com/matsuolab/lecture-ai-engineering-2026-es/blob/feat/lecture05-rag-update-20261115/scripts/build_rag_index.py) | Genera representaciones vectoriales de los materiales y crea la base de datos SQLite para búsquedas |
-| [app/retrieval.py](https://github.com/matsuolab/lecture-ai-engineering-2026-es/blob/feat/lecture05-rag-update-20261115/app/retrieval.py) | Búsqueda vectorial, exploración Tree y Graph, y procesamiento con todos los materiales |
-| [app/tools.py](https://github.com/matsuolab/lecture-ai-engineering-2026-es/blob/feat/lecture05-rag-update-20261115/app/tools.py) | Descripciones, entradas y salidas de las herramientas que usa el modelo |
-| [app/agent.py](https://github.com/matsuolab/lecture-ai-engineering-2026-es/blob/feat/lecture05-rag-update-20261115/app/agent.py) | Instrucciones, registro de herramientas y selección del modo de ejecución |
-| [app/config.py](https://github.com/matsuolab/lecture-ai-engineering-2026-es/blob/feat/lecture05-rag-update-20261115/app/config.py) | Materiales seleccionados, número de resultados y alcance de la exploración Graph, entre otros ajustes |
+| [data/rag_data/lectures.json](../../data/rag_data/lectures.json) | Títulos y textos organizados por sesión, capítulo y página. Cada página se usa como un fragmento |
+| [data/rag_data/tree.json](../../data/rag_data/tree.json) | Jerarquía de materiales, capítulos y páginas |
+| [data/rag_data/graph.json](../../data/rag_data/graph.json) | Nodos de páginas, términos y otros elementos, y sus relaciones |
+| [data/rag_data/index.sqlite3](../../data/rag_data/index.sqlite3) | Base de datos de búsqueda con las 214 páginas de los materiales principales de Lecture 01–03 |
+| [scripts/build_rag_index.py](../../scripts/build_rag_index.py) | Genera representaciones vectoriales de los materiales y crea la base de datos SQLite para búsquedas |
+| [app/retrieval.py](../../app/retrieval.py) | Búsqueda vectorial, exploración Tree y Graph, y procesamiento con todos los materiales |
+| [app/tools.py](../../app/tools.py) | Descripciones, entradas y salidas de las herramientas que usa el modelo |
+| [app/agent.py](../../app/agent.py) | Instrucciones, registro de herramientas y selección del modo de ejecución |
+| [app/config.py](../../app/config.py) | Materiales seleccionados, número de resultados y alcance de la exploración Graph, entre otros ajustes |
 
-**Alcance del ejercicio tras la actualización**: la búsqueda vectorial, Tree y Graph usan las 214 páginas de los materiales principales de Lecture 01–03. El modo de contexto completo utiliza los 9 documentos y las 438 páginas del JSON. En este ejercicio observaremos las distintas formas de recuperar información. Para comparar el rendimiento de los métodos en las mismas condiciones, iguala primero los materiales utilizados.
+**Alcance actual**: la búsqueda vectorial, Tree y Graph usan las 214 páginas de los materiales principales de Lecture 01–03. El modo de contexto completo utiliza los 6 documentos y las 342 páginas que contiene el JSON de esta versión. En este ejercicio observaremos las distintas formas de recuperar información. Para comparar el rendimiento de los métodos en las mismas condiciones, iguala primero los materiales utilizados.
 
 ## Preparación previa
 
 ### 1. Incorporar la actualización de Lecture 05 y crear la rama lec05
 
-Cuando se publique la actualización de datos y código que active Lecture 05 en el repositorio del curso, pulsa **Sync fork → Update branch** en tu fork y ejecuta lo siguiente en el terminal de Codespaces.
+En tu fork, elige **Sync fork → Update branch** para actualizar `main`. Abre el terminal de Codespaces y ejecuta los comandos de abajo para crear tu rama de trabajo.
 
 ```bash
 git switch main
@@ -47,9 +45,9 @@ uv sync --frozen
 
 Usa la misma variable de entorno `GEMINI_API_KEY` de Lecture 01. Si registraste el secret después de iniciar Codespaces, reinicia el Codespace. Consulta la configuración en el [README](../../README.md).
 
-### 2. Comprobar la base de datos de búsqueda tras la actualización pendiente
+### 2. Comprobar la base de datos de búsqueda incluida
 
-La búsqueda vectorial y Graph usarán directamente `data/rag_data/index.sqlite3`, pendiente de publicación junto con los materiales en español. Una vez publicada e incorporada la actualización de datos y código de Lecture 05, comprueba que existe esa base de datos y pasa al ejercicio. La vectorización de las preguntas y la generación de respuestas usan `GEMINI_API_KEY`. Tree y el modo de contexto completo no necesitan la base de datos de búsqueda, pero sí los materiales y el código de la actualización pendiente.
+La búsqueda vectorial y Graph usan directamente `data/rag_data/index.sqlite3`. Una vez incorporada la actualización de Lecture 05, puedes pasar al ejercicio. La vectorización de las preguntas y la generación de respuestas usan `GEMINI_API_KEY`. Tree y el modo de contexto completo no necesitan la base de datos de búsqueda.
 
 ## Ejercicios
 
@@ -74,7 +72,7 @@ uv run python -m app.retrieval "LoRA QLoRA diferencias"
 
 Se recuperan hasta 5 páginas cercanas a la pregunta, sin usar el agente. Se muestran el nombre de la sesión, el capítulo, el título de la página, el número de página del PDF y el texto.
 
-- ¿Aparecen páginas que respalden la respuesta, como Lecture 02 · PDF p.52?
+- ¿Aparecen páginas que respalden la respuesta, como `lec02-main-p052`?
 - ¿Puedes distinguir entre páginas que solo contienen términos similares y páginas que aportan evidencias para responder?
 
 Abre el JSON de los materiales en el editor y busca, por ejemplo, `lec02-main-p052` para consultar el texto de esa página.
@@ -88,7 +86,7 @@ uv run python -m app.agent --trace "$AIE_QUESTION"
 En el modo predeterminado responde un agente con `search_materials(query)`. El modelo elige la consulta y responde usando el texto recuperado.
 
 - Comprueba la consulta y el número de llamadas a herramientas en `[tool call]`
-- Comprueba que las citas «Lecture N · PDF p.N» respalden lo que explica la respuesta
+- Comprueba que cada cita respalde la explicación. La referencia señala la página traducida cuando se ha verificado, o la página del original japonés de la que procede el texto.
 - Distingue entre no recuperar las evidencias necesarias y recuperarlas sin utilizarlas correctamente
 
 Algunas preguntas se resuelven solo con las evidencias de p.52. Aumentar el número de páginas citadas no es un objetivo en sí mismo.
@@ -129,7 +127,7 @@ Si tienes tiempo, cambia la pregunta y repite la comparación. Si comparas varia
 
 | Tipo | Ejemplo de pregunta | Evidencias que comprobar |
 |---|---|---|
-| Varias páginas | En los ejemplos de Lecture 03, ¿qué diferencia hay entre la compactación y la memoria entre sesiones? ¿Todas las notas diarias pasan a la memoria a largo plazo? | Lecture 03 · PDF p.13, 39, 40 |
+| Varias páginas | En los ejemplos de Lecture 03, ¿qué diferencia hay entre la compactación y la memoria entre sesiones? ¿Todas las notas diarias pasan a la memoria a largo plazo? | `lec03-main-p013`, `lec03-main-p039`, `lec03-main-p040` |
 | Ausente de los materiales | Indica el tiempo medio de respuesta y la tasa de acierto medidos para el sistema RAG que acabamos de crear | Los materiales de clase no contienen registros de mediciones de este sistema |
 
 ### PASO 6: entregar y detener Codespaces
@@ -193,7 +191,7 @@ Puedes usar herramientas de IA. Describe lo que hayas ejecutado y comprobado per
 | Síntoma | Qué comprobar |
 |---|---|
 | No se encuentra `GEMINI_API_KEY` | Comprueba que registraste el secret de Codespaces y que reiniciaste el Codespace si lo añadiste después |
-| «No se encuentra la base de datos de búsqueda» | La base de datos todavía no se incluye en esta publicación. Cuando esté disponible la actualización de datos y código de Lecture 05, incorpórala y comprueba que existe `data/rag_data/index.sqlite3`. Si configuraste `AIE_RAG_DB`, comprueba esa ruta |
+| «No se encuentra la base de datos de búsqueda» | Incorpora la actualización de Lecture 05 y comprueba que existe `data/rag_data/index.sqlite3`. Si configuraste `AIE_RAG_DB`, comprueba esa ruta |
 | Se alcanza el límite de uso de la API | Espera según el mensaje y vuelve a ejecutar |
 | La consulta está vacía | Si abriste otro terminal, define de nuevo `AIE_QUESTION` |
 | Los resultados de búsqueda no responden a la pregunta | Prueba solo la búsqueda con `app.retrieval` y comprueba la consulta, los materiales seleccionados y el número de resultados |

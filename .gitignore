@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# No incluir secretos en commits (la clave API se pasa mediante un secret de Codespaces)
+.env
+.env.*
+
+# No compartir registros personales de aprendizaje (creados en la tarea de Lecture 03)
+learning_log/
+
+# macOS
+.DS_Store
+
+# Lecture 05: base de datos de búsqueda regenerada a partir de los materiales
+.cache/rag/

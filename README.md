@@ -36,11 +36,11 @@ Consulta las instrucciones detalladas en [lectures/01/problem.md](lectures/01/pr
 
 ## Lecture 05: buscar en los materiales de clase
 
-**Estado de publicación:** las instrucciones y la plantilla de respuestas ya están traducidas. Los materiales en español, su índice de búsqueda y la activación del código de Lecture 05 en `main` siguen pendientes. Los comandos de esta sección se aplican después de la actualización de datos y código.
+La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca actualmente 6 documentos y 342 páginas. Quedan pendientes la orientación inicial y los ejercicios de Lecture 01 y 02.
 
 Las instrucciones de los ejercicios y la tarea están en [lectures/05/problem.md](lectures/05/problem.md). Escribe los resultados en [lectures/05/answer.md](lectures/05/answer.md).
 
-La actualización pendiente incorporará `data/rag_data/index.sqlite3`, una base de datos con las representaciones vectoriales de las 214 páginas de los materiales principales de Lecture 01–03. Después de incorporarla junto con el código, configura `GEMINI_API_KEY` y sincroniza las dependencias desde la raíz del repositorio para probar las búsquedas y las respuestas. La vectorización de las preguntas y la generación de respuestas usan la API.
+Se incluye `data/rag_data/index.sqlite3`, una base de datos con las representaciones vectoriales de las 214 páginas de los materiales principales de Lecture 01–03. Configura `GEMINI_API_KEY` y sincroniza las dependencias desde la raíz del repositorio para probar las búsquedas y las respuestas. La vectorización de las preguntas y la generación de respuestas usan la API.
 
 ```bash
 uv sync --frozen
@@ -56,7 +56,7 @@ export AIE_RAG_DB="$PWD/.cache/rag/custom.sqlite3"
 uv run python -m scripts.build_rag_index
 ```
 
-Para reconstruir esa misma base experimental, añade `--rebuild` al comando de creación. Ejecuta `unset AIE_RAG_DB` para volver a la base que se distribuya con esa actualización. Tree (`--tree`) y el modo de contexto completo (`--full-context`) no necesitan la base de datos de búsqueda.
+Para reconstruir esa misma base experimental, añade `--rebuild` al comando de creación. Ejecuta `unset AIE_RAG_DB` para volver a la base incluida. Tree (`--tree`) y el modo de contexto completo (`--full-context`) no necesitan la base de datos de búsqueda.
 
 ## Estructura
 
@@ -69,12 +69,14 @@ app/
   tools.py       Lecture 03: herramientas del agente (búsqueda en el glosario, etc.)
   agent.py       Lecture 03: agente de apoyo al aprendizaje con Pydantic AI (Lecture 06: mediante MCP con --mcp)
   judge.py       Lecture 04: evaluar casos con un LLM y calcular el acuerdo con etiquetas humanas
+  retrieval.py   Lecture 05: búsqueda en materiales, exploración Tree/Graph y contexto completo
   mcp_server.py  Lecture 06: servidor MCP que ofrece el glosario
   mcp_servers.json Lecture 06: configuración de los servidores MCP que se usarán (formato mcpServers)
 data/
   glossary.json  Glosario del curso
   lectures/      Puntos clave de cada sesión
   eval/          Lecture 04: conjunto de evaluación (lec04_cases.jsonl) y criterios (rubric.md)
+  rag_data/      Lecture 05: textos (lectures.json), índice de contenidos (tree.json), relaciones de páginas y términos (graph.json) y base de datos de búsqueda (index.sqlite3)
 tools/
   annotate.py    Lecture 04: interfaz de etiquetado (Streamlit, añadido temporalmente con uv run --with)
 .streamlit/      Configuración de Streamlit para el reenvío de puertos de Codespaces
@@ -83,6 +85,7 @@ lectures/NN/
   answer.md      Archivo que debes completar y entregar
 notebooks/       Lecture 02: cuaderno de LoRA para Google Colab (lora_format_tuning.ipynb)
 scripts/
+  build_rag_index.py Lecture 05: vectorizar los materiales y crear la base de datos de búsqueda
   make_sft_dataset.py Lecture 02: preparar datos de entrenamiento
 tests/           Pruebas (no requieren clave API)
 pyproject.toml / uv.lock  Dependencias y sus versiones fijadas
