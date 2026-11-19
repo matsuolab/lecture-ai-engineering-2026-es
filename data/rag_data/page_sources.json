@@ -20,8 +20,9 @@
       "file_sha256": "c4af51cabe2f28d1ca7e1529d65b71f99dfc25b9db2f3a79643bbf913c012eac",
       "label": "Lecture 1 · PDF traducido, p. 2"
     },
-    "content_sha256": "514ef181c05761912dfafad1fd82a043e33ca28d9849556e353806eaa22e8ae2",
-    "origin": "uploaded_spanish_pdf_reused"
+    "content_sha256": "e016ba3c4bddd915bc94e2fadb867121e529f811159f5ae821dda673fdf6c431",
+    "origin": "uploaded_spanish_pdf_reused",
+    "source_correction": "Restored the source's inclusive lower bound (at least)."
   },
   "lec01-main-p003": {
     "canonical_japanese_page": 3,
@@ -657,8 +658,9 @@
       "file_sha256": "c4af51cabe2f28d1ca7e1529d65b71f99dfc25b9db2f3a79643bbf913c012eac",
       "label": "Lecture 1 · PDF traducido, p. 55"
     },
-    "content_sha256": "bfe79df9329265763a7fe7c99029311e4f2079dae26f7ae2ac430a4cd856d882",
-    "origin": "uploaded_spanish_pdf_reused_with_corrections"
+    "content_sha256": "f66ce1db7d6e5c0d9fdf928ee32411199a24068cff6a815be98dd115825a63f4",
+    "origin": "uploaded_spanish_pdf_reused_with_corrections",
+    "source_correction": "Restored the source's inclusive lower bound (at least)."
   },
   "lec01-main-p056": {
     "canonical_japanese_page": 56,
@@ -3098,8 +3100,9 @@
       "file_sha256": "bed47522b6fec7f49abe2f634c45e47cccba8cc35a595016bdcb0c99c85261c4",
       "label": "Lecture 5 · PDF traducido, p. 29"
     },
-    "content_sha256": "710b5cab89450c939f92eb86fc12ffc4ee45dea989c8dda72a346ca993e1a04a",
-    "origin": "existing_spanish_pdf_corrected_or_supplemented"
+    "content_sha256": "65ec532436a6902a92821aefa8377ded5967ef8fdadca46b9f9902893afc07ab",
+    "origin": "existing_spanish_pdf_corrected_or_supplemented",
+    "source_correction": "The supplied PDFs share the same image with the complete mistral-nemo and oracle_bm25 legend labels."
   },
   "lec05-main-p030": {
     "canonical_japanese_page": 30,

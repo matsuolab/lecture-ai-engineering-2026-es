@@ -34,10 +34,10 @@
     "regenerated": false
   },
   "files_sha256": {
-    "index.sqlite3": "64d0f17c92310ea7e1857c23063b8e0e79c2ff9e067463f49b31813a549dc6a4",
-    "lectures.json": "159d50e89c10efd320cfab6387e0dccf2a53760a19ce983dd179379f8479cc91",
+    "index.sqlite3": "4f905631e162cd8aef2ef1517b355e26dbf446e105a5ba3b154fc2beefbfacce",
+    "lectures.json": "c3cfb83e79d9f66ac2eec9d3adef0a2b62ba865f7c25eead42ea54743a2fdd2f",
     "tree.json": "6991cdd47ea9d6653dfad20bd887803b74bf42c70b889db70c55eb763f59ae06",
     "graph.json": "ca39be0a47bf4eedb1e5e6551384ee2f882a1febdb8696d8d62de74513ed2945",
-    "page_sources.json": "0f3d01fbeb0d488df961c2daca4276295f420674b9c4d5f824859bcbaa11b9ea"
+    "page_sources.json": "0d2fdfd38577234ffa27c960133f6eb43384599c3f24ce4e2af148c42821c34e"
   }
 }
