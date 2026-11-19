@@ -1,0 +1,38 @@
+{
+  "status": "partial_text_preparation_not_a_search_database",
+  "language": "es",
+  "canonical_japanese_source": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "documents": {
+    "lec03-main": 71,
+    "lec03-exercise": 26,
+    "lec04-exercise": 23
+  },
+  "total_prepared_pages": 120,
+  "prepared_indexed_pages": 71,
+  "remaining_index_documents": [
+    "lec01-main",
+    "lec02-main"
+  ],
+  "remaining_full_context_documents": [
+    "orientation",
+    "lec01-main",
+    "lec02-main",
+    "lec05-main",
+    "lec01-exercise",
+    "lec02-exercise"
+  ],
+  "vectors_generated": false,
+  "retrieval_accuracy_measured": false,
+  "citations": "page is the canonical Japanese reference. Consult provenance for actual translated slide numbers; some content is newly translated from Japanese updates.",
+  "hashes": {
+    "lec03-main.json": "4f5f1e05d9250b1e040008536e3516ace48792c852b678a2633804ce4c299f32",
+    "lec03-exercise.json": "7e0d0a5b04f72c03108e14ab6069ccf8e2bf0f5d5d5b9ab2d0ef96a49fe8475c",
+    "lec04-exercise.json": "49eb786d3297352a45c80ab572c77a3cc5e766014d52666fcc0963d11558a3e1",
+    "graph-terms.json": "221ba9583fde3fdac51d8ffd0629aa651065255b59f3ef6c388b8dc05d9f5696",
+    "provenance.json": "56a44361e9406859a597a8a9837e1e499e1a60e39e8ddd60626fa07f4d19a402",
+    "lec03-exercise-provenance.json": "3bd38c390f96a999c5ba3acc4e0ab6a74eadffe85f937a632c4de6505acc730e",
+    "lec04-exercise-provenance.json": "026688f6e84a8197a5b0c666b44593854c0418c6132767802196b5714509c4c7",
+    "audit.md": "bd3c8b8920e9d12dccfbb281fd962af853a58ad81708a82a65c33603a4c8f381",
+    "exercise-audit.md": "783e3d1a0e314d46aa90661cffefef1243e61832daf9680ead8acba81f3d0241"
+  }
+}
