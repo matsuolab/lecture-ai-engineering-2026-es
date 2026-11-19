@@ -12,17 +12,15 @@
     "lec02-main": 70,
     "lec03-main": 71,
     "lec05-main": 79,
+    "lec01-exercise": 25,
+    "lec02-exercise": 31,
     "lec03-exercise": 26,
     "lec04-exercise": 23
   },
-  "available_full_context_pages": 342,
-  "pending_full_context_documents": [
-    "lec01-exercise",
-    "lec02-exercise",
-    "orientation"
-  ],
+  "available_full_context_pages": 398,
+  "pending_full_context_documents": [],
   "reference_types": {
-    "translated_pdf": 205,
+    "translated_pdf": 261,
     "japanese_source": 137
   },
   "embedding": {
@@ -35,9 +33,12 @@
   },
   "files_sha256": {
     "index.sqlite3": "4f905631e162cd8aef2ef1517b355e26dbf446e105a5ba3b154fc2beefbfacce",
-    "lectures.json": "c3cfb83e79d9f66ac2eec9d3adef0a2b62ba865f7c25eead42ea54743a2fdd2f",
-    "tree.json": "6991cdd47ea9d6653dfad20bd887803b74bf42c70b889db70c55eb763f59ae06",
-    "graph.json": "ca39be0a47bf4eedb1e5e6551384ee2f882a1febdb8696d8d62de74513ed2945",
-    "page_sources.json": "0d2fdfd38577234ffa27c960133f6eb43384599c3f24ce4e2af148c42821c34e"
-  }
+    "lectures.json": "47f321c70cfd9f2c9db8668e26e2c761c93691aa1d1e9c2274efb5319ba1a0cd",
+    "tree.json": "f6fbd784a50dd2a15342490d4bed9de8134d1b75a7a7073d9b04bf03af385eee",
+    "graph.json": "86c41d1fc835001b5f8cc9a1eed51d8c78bedd58a60740bbee495d3d97605f82",
+    "page_sources.json": "3a904bfc82203ac3aab21bc3bbbebc2c458a6bb450c288b6abf214f8229ee25b"
+  },
+  "excluded_full_context_documents": [
+    "orientation"
+  ]
 }

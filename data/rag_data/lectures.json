@@ -2220,6 +2220,420 @@
     ]
   },
   {
+    "id": "lec01-exercise",
+    "title": "Clase 1: práctica y tarea — Configura el entorno de desarrollo y usa un LLM",
+    "content": [
+      {
+        "section": "Todas las diapositivas",
+        "content": [
+          {
+            "id": "lec01-exercise-p001",
+            "title": "Configura el entorno de desarrollo y usa un LLM",
+            "page": 1,
+            "content": "Configura el entorno de desarrollo y usa un LLM\nCurso práctico de ingeniería de IA 2026\nClase 1 | Prácticas y tarea\nIntroducción a la ingeniería de IA y la programación asistida por IA\n2026/10/19  Práctica: Yoshiaki Sato\nAbre tu fork en Codespaces, deja listos Gemini API y GitHub Copilot, y entrega con un PR\nProhibido fotografiar o divulgar a terceros\nsin permiso.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 1"
+          },
+          {
+            "id": "lec01-exercise-p002",
+            "title": "Objetivos de esta sesión",
+            "page": 2,
+            "content": "Objetivos de esta sesión\nPreparamos el entorno y el flujo de entrega de las próximas clases.\n1\nAbrir tu fork en Codespaces y llamar a\nGemini API\n2\nHacer pequeños cambios en el código\ncon GitHub Copilot\n3\nEntregar con un PR desde una rama de trabajo\n(igual en las próximas clases)\nHerramientas: GitHub Codespaces (entorno de desarrollo en el navegador), Gemini API (el LLM de Google), GitHub Copilot (herramienta de programación con IA).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 2"
+          },
+          {
+            "id": "lec01-exercise-p003",
+            "title": "Necesitas: 2 cuentas personales",
+            "page": 3,
+            "content": "Necesitas: 2 cuentas personales\nUsaremos cuentas de GitHub y Google para entregar las tareas y hacer las prácticas.\nCuenta personal de GitHub\nPara: fork, Codespaces, Copilot, PR\nCon una cuenta de GitHub también puedes usar el entorno virtual\nCodespaces y el agente Copilot.\nCuenta personal de Google\nPara: Google AI Studio (emitir la clave de Gemini API)\nPermite hacer prácticas con la API de un LLM.\nUsa cuentas personales para ambas\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 3"
+          },
+          {
+            "id": "lec01-exercise-p004",
+            "title": "Flujo de la práctica (45 min)",
+            "page": 4,
+            "content": "Flujo de la práctica (45 min)\nDesde el fork hasta detener Codespaces: 8 pasos en orden.\n1\nHacer fork del repo del curso\n5\nPreguntar a un LLM sin ajustes\n2\nEmitir la clave de Gemini API\n6\nMostrar el número de tokens con Copilot\n3\nRegistrar el Codespaces secret\n7\nCrear una rama y abrir un PR\n4\nIniciar Codespaces\n8\nDetener Codespaces\n1–4  Preparar el entorno\n5–8  Usar el LLM y Copilot, entregar y cerrar\nOjo al orden: registra el secret del paso 3 antes de iniciar Codespaces en el paso 4.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 4"
+          },
+          {
+            "id": "lec01-exercise-p005",
+            "title": "Paso 1 Hacer fork del repo del curso",
+            "page": 5,
+            "content": "Paso 1 Hacer fork del repo del curso\nPaso 1  Hacer fork del repo del curso\nCon Fork (arriba a la derecha) del repo del curso, crea un fork en tu cuenta.\n1\nAbre el repo del curso:\nhttps://github.com/matsuolab/lecture-ai-engineering-2026-es\n2\nPulsa Fork arriba a la derecha\n3\nEn Owner elige tu cuenta y pulsa Create fork\n4\nComprueba que el fork aparece en tu cuenta\nOrigen del fork\nRepo del curso\nmatsuolab/lecture-ai-engineering-2026-es\n↓ Fork\nTu fork\n<tu-cuenta>/<nombre-del-repositorio>\nCodespaces, commit, push y PR: todo aquí\nTodo el trabajo se hace en tu fork. No abras PR al repo del curso.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 5"
+          },
+          {
+            "id": "lec01-exercise-p006",
+            "title": "Paso 2 Emitir la clave de Gemini API",
+            "page": 6,
+            "content": "Paso 2 Emitir la clave de Gemini API\nPaso 2  Emitir la clave de Gemini API\nCrea una clave de API en Google AI Studio y cópiala. La usarás en el paso 3.\n1\nAbre Google AI Studio con tu cuenta personal de Google:\nhttps://aistudio.google.com/apikey\n2\nCrea una clave de API\n3\nCopia la clave creada (regístrala directamente en el paso 3)\nDónde NO pegar la clave\n• Código\n• Chat\n• Commit\nLa clave de API es secreta. No la pegues en el código, el chat ni los commits.\nSi se filtra, bórrala en AI Studio y crea una nueva.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 6"
+          },
+          {
+            "id": "lec01-exercise-p007",
+            "title": "Paso 3 Registrar el Codespaces secret",
+            "page": 7,
+            "content": "Paso 3 Registrar el Codespaces secret\nPaso 3  Registrar el Codespaces secret\nNo escribas la clave de API en el código: regístrala como Codespaces secret.\nSettings\n→\nCodespaces\n→\nSecrets\n→\nNew secret\nHay Settings de GitHub y Settings del repositorio del fork; es fácil confundirlos.\nAquí debes configurarlo desde los Settings de GitHub.\nCampo\nValor a registrar\nName\nGEMINI_API_KEY\nValue\nClave del paso 2\nRepository access\nElige tu fork\nRegístralo antes de iniciar Codespaces. Si lo registras después, tendrás que reiniciar Codespaces.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nRuta en GitHub: foto de perfil (arriba a la derecha) → Settings → Codespaces → Secrets → New secret.",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 7"
+          },
+          {
+            "id": "lec01-exercise-p008",
+            "title": "Paso 4 Iniciar Codespaces",
+            "page": 8,
+            "content": "Paso 4 Iniciar Codespaces\nPaso 4  Iniciar Codespaces\nCrea un Codespace en tu fork y comprueba en la terminal que pasan los tests.\n1\nEn la página de tu fork, pulsa Code\n2\nElige Codespaces y pulsa Create codespace on main\n3\nLa 1.ª vez tarda unos minutos\n4\nEjecuta en la terminal y comprueba que pasan los tests\nuv run pytest -q\nPágina de tu fork\nCaptura de pantalla de GitHub\nMáquina recomendada: 2-core (predeterminada). Más núcleos consumen antes la cuota gratuita. Cuota y detención: paso 8.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nCaptura de Codespaces: «Your workspaces in the cloud», «You don't have any codespaces with this repository checked out» y «Learn more about codespaces».",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 8"
+          },
+          {
+            "id": "lec01-exercise-p009",
+            "title": "Paso 5 Preguntar al LLM",
+            "page": 9,
+            "content": "Paso 5 Preguntar al LLM\nPaso 5  Preguntar al LLM\nPregunta por un término general y por algo propio del curso, y compara las respuestas.\nuv run python -m app.ask \"¿Qué es LoRA?\"\nTérmino general\nRespuesta mayormente correcta\nuv run python -m app.ask \"¿Qué son los “3 niveles”\nde las tareas del curso AIE2026?\"\nPropio del curso: “3 niveles de tarea”\nEl LLM sin ajustes no conoce el curso: responde “no lo sé” o algo\ngeneral pero plausible\nLa respuesta correcta está en homework-levels de data/glossary.json. Compárala con la del modelo.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 9"
+          },
+          {
+            "id": "lec01-exercise-p010",
+            "title": "Paso 5 Qué observar",
+            "page": 10,
+            "content": "Paso 5 Qué observar\nPaso 5  Qué observar\nLa respuesta cambia en cada ejecución, incluso con la misma pregunta. A veces responde con seguridad sobre lo que no sabe.\nSi te sobra tiempo, prueba otras preguntas propias del curso\nuv run python -m app.ask \"¿Qué es la “etiqueta lecNN” que se usa en el curso AIE2026?\"\nuv run python -m app.ask \"¿Qué se aprende en la clase 2 de AIE2026?\"\nTérmino general\nResponde mayormente bien\nPropio del curso\nNo lo sabe: dice “no lo sé” o responde\nalgo general y plausible\nAl repetir\nLa respuesta cambia en cada ejecución.\nPuede equivocarse con seguridad\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nLa respuesta correcta está en homework-levels de data/glossary.json. Compárala con la del modelo.",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 10"
+          },
+          {
+            "id": "lec01-exercise-p011",
+            "title": "Paso 6 Mostrar el número de tokens con Copilot",
+            "page": 11,
+            "content": "Paso 6 Mostrar el número de tokens con Copilot\nPaso 6  Mostrar el número de tokens con Copilot\nEn el lugar de TODO de app/ask.py, modifica el código para mostrar los tokens de entrada y de salida.\n1\nAbre app/ask.py y busca TODO\n2\nModifícalo para mostrar los tokens de entrada y salida. Puedes usar el\nautocompletado o el chat de Copilot\n3\nLee y entiende el código sugerido antes de adoptarlo\nGitHub Copilot\nFunciones: autocompletado, chat, agente\nCopilot Free: hasta 2,000 autocompletados de código al mes\nEstudiantes: los verificados usan Copilot Student\ngratis\nLee y entiende el código sugerido antes de adoptarlo.\nFuente: docs.github.com  https://docs.github.com/en/copilot/get-started/plans\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nSobre AGENT.md / CLAUDE.md\nLos agentes de programación tienen un mecanismo para\ntransmitir conocimiento implícito (lo veremos en la clase 3).\nConsulta el material complementario al final.",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 11"
+          },
+          {
+            "id": "lec01-exercise-p012",
+            "title": "Paso 7 Crear una rama y abrir un PR",
+            "page": 12,
+            "content": "Paso 7 Crear una rama y abrir un PR\nPaso 7  Crear una rama y abrir un PR\nAbre un PR desde la rama de trabajo lec01 hacia main de tu fork. Las próximas clases se entregan igual.\ngit switch -c lec01\n# escribe lectures/01/answer.md\ngit add -A\ngit commit -m \"Práctica de la clase 1\"\ngit push -u origin lec01\nRama de trabajo\nlec01\n↓ PR\nbase repository: tu fork\nmain\nNo enviar aquí\nRepo del curso\nEntrega: un PR con lectures/01/answer.md. En tu fork en GitHub, crea el PR lec01 → main.\nComprueba que base repository sea tu fork (no abras PR al repo del curso).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 12"
+          },
+          {
+            "id": "lec01-exercise-p013",
+            "title": "Paso 8 Detener Codespaces",
+            "page": 13,
+            "content": "Paso 8 Detener Codespaces\nPaso 8  Detener Codespaces\nSi lo dejas en marcha, sigue consumiendo la cuota gratuita. Detenlo siempre al terminar.\nAbajo izq.\nCodespaces\n→\nStop Current Codespace\nCuota gratuita de Codespaces (cuenta personal, mensual)\nPlan\nAlmacenamiento\nCómputo\nGitHub Free\n15 GB-month\n120 horas\nGitHub Pro\n20 GB-month\n180 horas\nMultiplicador: según la máquina (2-core es 2, 4-core es\n4). Más núcleos consumen antes la cuota: elige 2-core\nSi se agota: sin método de pago registrado, no podrás usarlo hasta\nel reinicio del mes siguiente (sin cargos)\nFuente: docs.github.com  https://docs.github.com/en/billing/concepts/product-billing/github-codespaces\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 13"
+          },
+          {
+            "id": "lec01-exercise-p014",
+            "title": "Tarea: basta con una",
+            "page": 14,
+            "content": "Tarea: basta con una\nElige uno de los 3 niveles: Básico, Implementación o Avanzado.\nNivel\nContenido\nBásico\nHaz la misma pregunta 3 veces cambiando el modelo (variable de entorno AIE_MODEL) o la temperature, y resume las\ndiferencias en answer.md\nImplementación\nModifica app/ask.py para poder seguir preguntando manteniendo el historial de la conversación\nAvanzado\nMide el tiempo de respuesta y los tokens, y compara entre modelos y preguntas. Analiza también la relación con los\nlímites de la cuota gratuita\nModelo y temperature: cómo cambiarlos y precauciones en la\nsiguiente diapositiva\nEntrega: escribe en lectures/01/answer.md y envía un PR. Reglas en\nla diapositiva posterior\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 14"
+          },
+          {
+            "id": "lec01-exercise-p015",
+            "title": "Entrega de la tarea y reglas",
+            "page": 15,
+            "content": "Entrega de la tarea y reglas\nEscribe en answer.md y entrega con un PR, igual que en la práctica. Basta con un nivel.\n1\nTrabaja en una rama de trabajo de tu fork. Si cambias código (Implementación/Avanzado), haz commit también de ese código\n2\nEscribe en lectures/01/answer.md: nivel elegido, qué hiciste, resultados y modelo usado\n3\nHaz commit y push, y abre un PR. Comprueba que base repository sea tu fork\nEvaluación: realiza al menos una\nHerramientas de IA: permitidas. Escribe lo\nque hayas comprobado tú\nClave de API: no la escribas en answer.md,\ncódigo, logs ni capturas\nIncluye también los resultados fallidos o sin diferencias, tal cual\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 15"
+          },
+          {
+            "id": "lec01-exercise-p016",
+            "title": "Cambio de modelo y precauciones",
+            "page": 16,
+            "content": "Cambio de modelo y precauciones\nCambia el modelo con la variable de entorno AIE_MODEL. Anota con qué modelo ejecutaste.\nAIE_MODEL=gemini-3.8-flash uv run python -m app.ask \"¿Qué es LoRA?\"\nAIE_MODEL=gemini-3.5-flash-lite uv run python -m app.ask \"¿Qué es LoRA?\"\nModelo\nLímite gratuito (medido)\nUso recomendado\ngemini-3.5-flash-lite\n15/min, 500 solicitudes/día\nLímite alto. Para repetir y comparar\ngemini-3.8-flash (superior)\n5/min, unas 10–20/día. Puede devolver 503\nPocas preguntas, modelo potente\nNo usar: gemini-3.5-flash (sin lite). Obsoleto\ndesde 2026-10-08; se redirige a gemini-3.6-flash\ntemperature: revisa el argumento config de\ngenerate_content. Google lo declaró obsoleto el\n2026-07-21; puede ignorarse o dar error. Anota el\nresultado tal cual\nLos límites varían por modelo: consulta los\nactuales en AI Studio. Revisa la cuota de uso y\nsi puedes usar la API\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 16"
+          },
+          {
+            "id": "lec01-exercise-p017",
+            "title": "Avance de la clase 2: Fundamentos de los modelos fundacionales",
+            "page": 17,
+            "content": "Avance de la clase 2: Fundamentos de los modelos fundacionales\nEn la práctica usaremos LoRA en Colab para aprender un formato de respuesta y comparar.\nClase teórica\n• Fundamentos de los modelos fundacionales\n• Configuración y variabilidad de salida\n• Cómo funcionan LoRA y QLoRA\nPráctica\n• Entrenar con LoRA en Colab\n• Comparar antes y después, separando formato y contenido\nLa “variabilidad” y el “responder lo que no sabe” de hoy enlazan con los fundamentos de la clase 2\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nLo observado hoy\nQué veremos en la clase 2\nMisma pregunta, respuesta distinta en cada ejecución\nConfiguración y variabilidad de salida\nResponde de forma plausible aunque no conozca el curso\nQué aprende el modelo en el entrenamiento y qué no",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 17"
+          },
+          {
+            "id": "lec01-exercise-p018",
+            "title": "Resumen: logros de hoy y próxima clase",
+            "page": 18,
+            "content": "Resumen: logros de hoy y próxima clase\nHemos visto el entorno de desarrollo y el flujo de entrega de las próximas clases.\n1\nAbriste tu fork en Codespaces y\nllamaste a Gemini API\n2\nCon Copilot, modificaste el código para\nmostrar los tokens\n3\nAbriste un PR de lec01 a main de tu fork\nTarea: basta con un nivel (Básico, Implementación o Avanzado).\nPlazo: en principio, 1 semana (10/26)\nClase 2: Fundamentos de los modelos fundacionales. LoRA en Colab\nDetén Codespaces al terminar\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 18"
+          },
+          {
+            "id": "lec01-exercise-p019",
+            "title": "Anexo",
+            "page": 19,
+            "content": "Anexo\nContexto reutilizable\n(AGENTS.md / CLAUDE.md)\nEscribe lo que no se puede deducir para el agente, que lee todo desde cero cada vez\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 19"
+          },
+          {
+            "id": "lec01-exercise-p020",
+            "title": "¿Por qué hacen falta archivos de contexto?",
+            "page": 20,
+            "content": "¿Por qué hacen falta archivos de contexto?\nEl agente lee desde cero cada vez. Escribe el conocimiento implícito del repositorio y pásale siempre las mismas premisas.\nSi no lo escribes\n• Adivina los comandos de arranque y de tests\n• Desconoce convenciones no estándar y puntos problemáticos\n• Repites la misma explicación en cada petición\nSi lo escribes\n•\nSe carga desde el archivo al empezar el trabajo\n•\nSe hace commit en el repositorio y el equipo lo comparte y revisa\n•\nLa petición se centra en lo propio de cada tarea\nAGENTS.md\n“a README for agents”. Sin campos obligatorios; un archivo Markdown\nnormal. Formato común que leen muchas herramientas\nCLAUDE.md\nClaude Code lo lee al iniciar. No es una configuración obligatoria, sino un archivo\nusado como context. Para lo que debe ejecutarse siempre, usa otro mecanismo:\nhook\nFuente: agents.md “AGENTS.md”, Claude Code Docs “How Claude remembers your project”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 20"
+          },
+          {
+            "id": "lec01-exercise-p021",
+            "title": "Archivos principales y cómo se leen",
+            "page": 21,
+            "content": "Archivos principales y cómo se leen\nAGENTS.md común y archivos por herramienta. Cada herramienta decide cuáles lee y cómo.\nArchivo\nHerramientas\nCómo se lee\nAGENTS.md\nCodex, Cursor,\nGitHub Copilot, etc.\nAnidable; prioriza el más cercano. Codex concatena desde la raíz hasta el\ndirectorio de trabajo (hasta 32 KiB por defecto)\nCLAUDE.md\nClaude Code\nConcatena los de directorios superiores al iniciar. Los de subdirectorios, al\ntocar archivos allí. Sin CLAUDE.md, lee AGENTS.md\n.github/copilot-instructions.md\n.github/instructions/*.instructions.md\nGitHub Copilot\nTodo el repositorio / rutas con applyTo. El cloud agent también usa\nAGENTS.md y CLAUDE.md/GEMINI.md de la raíz\n.mdc en .cursor/rules\nCursor\nCondiciones de lectura con description, globs y alwaysApply. También\nadmite AGENTS.md\nGEMINI.md\nGemini CLI\nConcatena global → espacio de trabajo → directorios accedidos. Puede leer\nAGENTS.md por configuración\nFuente: agents.md, OpenAI “Custom instructions with AGENTS.md”, Claude Code Docs “How Claude remembers your project”, GitHub Docs “Adding repository\ncustom instructions”, Cursor Docs “Rules”, Gemini CLI Docs “GEMINI.md”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 21"
+          },
+          {
+            "id": "lec01-exercise-p022",
+            "title": "Configuración mínima: qué incluir y qué no",
+            "page": 22,
+            "content": "Configuración mínima: qué incluir y qué no\nPregunta en cada línea: “¿se equivocaría si la borro?”. Guía: menos de 200 líneas por archivo.\nIncluir\n• Comandos de arranque, tests y lint no deducibles\n• Estructura de directorios clave y convenciones no estándar\n• Lo que no se debe hacer\n• Definición de terminado (qué tests deben pasar)\n• Normas del repositorio (nombres de rama, convenciones de PR)\nNo incluir\n• Secretos (claves de API, etc.)\n• Lo deducible del código; convenciones generales\n• Explicaciones largas, documentación detallada de API\n• Información muy cambiante\n• Instrucciones obvias como “escribe clean code”\nMenos de 200 líneas\nCuanto más largo, más context usa y menos se\nsiguen las instrucciones\nimport con @path\nHasta 4 niveles de recursión. Importar no\nreduce el coste de context\nNo es obligatorio\nLo que debe ejecutarse siempre, configúralo con hook\nFuente: Claude Code Docs “How Claude remembers your project”, “Best practices for Claude Code”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 22"
+          },
+          {
+            "id": "lec01-exercise-p023",
+            "title": "Instrucciones siempre leídas y Skill leído según la tarea",
+            "page": 23,
+            "content": "Instrucciones siempre leídas y Skill leído según la tarea\nMantén breves las instrucciones siempre leídas. Separa los procedimientos por tarea en Skills y cárgalos solo al usarlos.\nSiempre se lee\nCLAUDE.md / AGENTS.md\nEntra en el context cada vez. Por eso, breve y solo lo común a todas las tareas\nSe lee según la tarea\nSkill: .claude/skills/<name>/SKILL.md\nSiempre entra solo la description; el cuerpo se carga al usarlo (progressive disclosure).\nSKILL.md: menos de 500 líneas como guía\nDiscovery\nLo conoce por la description\nActivation\nLee el cuerpo al usarlo\nExecution\nEjecuta los pasos\nReparto típico en un repositorio\nAGENTS.md / CLAUDE.md en la raíz\nSiempre leído: comandos no deducibles, convenciones no\nestándar, procedimiento de tests\n.claude/skills/<nombre>/SKILL.md\nProcedimientos por tarea (ejemplos de la guía oficial: convenciones de\nAPI, pasos para corregir un Issue)\nCriterio: ¿lo necesitan todas las tareas o solo algunas?\nAgent Skills: publicado como estándar abierto en 2025-12. También lo admiten Codex, GitHub Copilot, Cursor, Gemini CLI, etc.\nFuente: Claude Code Docs “Skills”, “Best practices for Claude Code”; Anthropic “Introducing Agent Skills” (2025-10-16, actualizado 2025-12-18); agentskills.io\n“Agent Skills Overview”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 23"
+          },
+          {
+            "id": "lec01-exercise-p024",
+            "title": "Evidencia: escribirlo no siempre mejora",
+            "page": 24,
+            "content": "Evidencia: escribirlo no siempre mejora\nLos archivos generados por LLM bajaron la tasa de éxito; los escritos por desarrolladores la subieron. Pero el coste aumenta.\naprox. −3%\nContext file generado por LLM: tasa de éxito\naprox. +4%\nContext file escrito por desarrolladores: tasa\nde éxito\nMás del 20%\nMás coste de inferencia\nGloaguen et al. (ETH Zurich y otros). Evaluaron 3 agentes de programación en AGENTbench (12 repositorios, 138 casos) y SWE-bench Lite. Siguen las instrucciones, pero las\ndescripciones generales del repositorio no ayudaron; sí fueron útiles para transmitir convenciones no estándar.\nOtro estudio (Lulla et al.): con AGENTS.md, la mediana del tiempo de ejecución fue un 28.64% menor y los tokens de salida un 16.58% menos,\ncon tasa de finalización similar (10 repositorios, 124 PR).\nNo basta con autogenerarlo: breve, escrito por personas y con efecto comprobado\nFuente: Gloaguen et al. “Evaluating AGENTS.md” arXiv:2602.11988 (2026-02-12, v3 2026-09-29); Lulla et al. “On the Impact of AGENTS.md Files on the Efficiency\nof AI Coding Agents” arXiv:2601.20404 (2026-01-28). Ambos son preprints\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 24"
+          },
+          {
+            "id": "lec01-exercise-p025",
+            "title": "No termina al escribirlo",
+            "page": 25,
+            "content": "No termina al escribirlo\nLos archivos de contexto son como el código: haz commit, revísalos y hazlos crecer.\n1 Añadir tras un fallo\nSi el agente repite un error,\nañade una línea para evitarlo\n2 Revisar\nSe hace commit en git y las personas\nlo leen como diff del PR\n3 Comprobar el efecto\nCompara el resultado de la misma\npetición antes y después\n4 Borrar lo obsoleto\nCorrige si cambian comandos o\nestructura. Recorta con “¿se\nequivocaría si lo borro?”\nRepetir en cada tarea\nGuía oficial: haz commit de CLAUDE.md en git y revísalo y recórtalo\ncomo el código.\nCómo ver el efecto: tras un cambio, observa si el comportamiento\ndel agente cambió de verdad.\nFuente: Claude Code Docs “Best practices for Claude Code”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 1: práctica y tarea · PDF traducido, p. 25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lec02-exercise",
+    "title": "Clase 2: práctica y tarea — Aprende un formato de respuesta con LoRA y compara los resultados antes y después del entrenamiento",
+    "content": [
+      {
+        "section": "Todas las diapositivas",
+        "content": [
+          {
+            "id": "lec02-exercise-p001",
+            "title": "Aprende un formato de respuesta con LoRA y compara los resultados antes y después del entrenamiento",
+            "page": 1,
+            "content": "Aprende un formato de respuesta con LoRA y compara los resultados antes y después del entrenamiento\nCurso práctico de ingeniería de IA 2026\nClase 2 | Práctica y tarea\nFundamentos de los modelos fundacionales\n2026/10/26  Práctica: Yoshiaki Sato\nEntrena un modelo pequeño con LoRA en poco tiempo y comprueba con cifras y salidas qué cambia y qué no\nSe prohíbe fotografiar o divulgar a\nterceros sin permiso.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 1"
+          },
+          {
+            "id": "lec02-exercise-p002",
+            "title": "Solución de la tarea de la Clase 1",
+            "page": 2,
+            "content": "Solución de la tarea de la Clase 1\nRepasamos lo observado al preguntar a un LLM sin modificar y lo enlazamos con la práctica de hoy (primeros 5–10 min).\nBásico\nEjecutar la misma pregunta 3 veces, variando el\nmodelo y la temperature, y resumir las diferencias\nen las respuestas\nImplementación\nModificar app/ask.py para poder seguir preguntando\nmanteniendo el historial de la conversación\nAvanzado\nMedir el tiempo de respuesta y el número de tokens, y\ncomparar entre modelos y preguntas. Pensar también en\nla relación con los límites de tasa de la cuota gratuita\nLo que importa es “qué pasó” y “por qué pasa”. No se trata de acertar una cifra correcta\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 2"
+          },
+          {
+            "id": "lec02-exercise-p003",
+            "title": "Básico: la misma pregunta da respuestas distintas",
+            "page": 3,
+            "content": "Básico: la misma pregunta da respuestas distintas\nLa generación es probabilística: con las mismas condiciones, la respuesta cambia. Enlaza con el “muestreo” de la clase teórica 2.\nLo que se observa\n• Aunque preguntes 3 veces en las mismas condiciones, la respuesta cambia en cada ejecución\n• Al cambiar de modelo (AIE_MODEL) cambian la redacción, la longitud y la forma de responder a lo que no sabe\nAspectos a comparar\n• Redacción\n• Longitud\n• Exactitud de los hechos\n• Grado de seguridad\n• Respuesta a preguntas propias del curso\ntemperature: Google la declaró obsoleta el 2026-07-21. Los modelos\nGemini 3.6 y posteriores la ignoran. Si no tiene efecto o da error, registra\nese resultado tal cual\n\ngemini-3.5-flash (sin lite): Debido a los cambios realizados en las\nespecificaciones de la API de Gemini en octubre, el modelo gemini-3.5-flash\nha sido marcado como obsoleto (deprecated). Las solicitudes a la API dirigidas a\ngemini-3.5-flash ahora se redirigen a gemini-3.6-flash. Dado que las\nespecificaciones de las API de los LLM cambian con frecuencia, es importante\nmantenerse al tanto de las actualizaciones y verificar que se esté utilizando el\nmodelo previsto al integrar estas API en aplicaciones.\nPara la tarea, pueden comparar las respuestas de los modelos utilizando cualquier\ncombinación, por ejemplo, gemini-3.5-flash-lite y gemini-3.8-flash.\nReferencia: https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash?hl=es\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 3"
+          },
+          {
+            "id": "lec02-exercise-p004",
+            "title": "Implementación: qué significa mantener el historial",
+            "page": 4,
+            "content": "Implementación: qué significa mantener el historial\nEl modelo no recuerda los intercambios anteriores. En cada llamada se envían, como entrada, todos los intercambios hasta ese momento.\nMétodo 1: usar el Chat del SDK\nCrear un Chat con client.chats.create y seguir enviando con\nsend_message\nEl Chat guarda el historial y lo envía completo cada vez\nMétodo 2: guardar el historial tú mismo\nAcumular en una lista los mensajes del usuario y del modelo\nPasar esa lista cada vez a contents de generate_content\nSolución de ejemplo: corregir app/ask.py con el método 1. En las 3 diapositivas siguientes vemos el antes, el después y lo que se envía.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 4"
+          },
+          {
+            "id": "lec02-exercise-p005",
+            "title": "Implementación: app/ask.py antes del cambio",
+            "page": 5,
+            "content": "Implementación: app/ask.py antes del cambio\nask() solo recibe una pregunta, llama una vez a generate_content y devuelve la respuesta.\nAntes del cambio (extracto)\n```python\ndef ask(question: str) -> str:\n    client = genai.Client(api_key=get_api_key())\n    response = client.models.generate_content(model=MODEL, contents=question)\n    # TODO (práctica de la clase 1): a partir de response.usage_metadata\n    #   muestra el número de tokens de entrada y de salida (puedes pedírselo a Copilot)\n    return response.text\n```\nmain recibe question con argparse (por defecto, DEFAULT_QUESTION) y muestra el resultado de ask(). Ante errors.APIError, lo muestra con api_error_message y\ntermina.\nCarencia 1: cada llamada invoca generate_content una sola vez,\ndesde cero\nCarencia 2: no incluye las preguntas y respuestas anteriores en la entrada,\nasí que no recuerda nada al seguir preguntando\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 5"
+          },
+          {
+            "id": "lec02-exercise-p006",
+            "title": "Implementación: chat() tras el cambio (solución de ejemplo)",
+            "page": 6,
+            "content": "Implementación: chat() tras el cambio (solución de ejemplo)\nSe añade chat() para seguir preguntando mientras el Chat conserva el historial.\nDespués del cambio (solución de ejemplo, función añadida)\n```python\ndef chat(first_question: str) -> None:\n    client = genai.Client(api_key=get_api_key())\n    session = client.chats.create(model=MODEL)  # el Chat del SDK guarda el historial\n    question = first_question\n    while question:\n        response = session.send_message(question)  # envía el historial previo + la pregunta actual\n        print(response.text)\n        usage = response.usage_metadata\n        print(f\"[tokens] entrada {usage.prompt_token_count} / salida {usage.candidates_token_count}\")\n        question = input(\"\\n[Sigue preguntando (línea vacía para salir)] \").strip()\n```\n1\nCrear un Chat con client.chats.create\n(guarda el historial)\n2\nLlamar a send_message en un bucle (línea\nvacía para salir)\n3\nAñadir la opción --chat y conservar ask() (sin romper\nel uso existente ni los tests)\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 6"
+          },
+          {
+            "id": "lec02-exercise-p007",
+            "title": "Implementación: qué se envía en cada llamada",
+            "page": 7,
+            "content": "Implementación: qué se envía en cada llamada\nLo enviado = historial previo + pregunta actual. Crece con cada turno.\nuv run python -m app.ask --chat \"¿Qué es LoRA?\"  # línea vacía para salir\n1.ª vez\nQ1\n2.ª vez\nQ1\nA1\nQ2\n3.ª vez\nQ1\nA1\nQ2\nA2\nQ3\n→ prompt_token_count aumenta cada vez\nAzul oscuro: pregunta actual   Gris: preguntas previas   Azul claro: respuestas previas\nMás tokens de entrada afectan al coste y al límite. Hay que recortar o resumir el historial antiguo\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 7"
+          },
+          {
+            "id": "lec02-exercise-p008",
+            "title": "Avanzado: tiempo de respuesta, tokens y límites de tasa",
+            "page": 8,
+            "content": "Avanzado: tiempo de respuesta, tokens y límites de tasa\nNo decidas con una sola medición: mide varias veces y compara. El número de tokens viene en la respuesta.\nTiempo de respuesta\n• Medir antes y después de la llamada con\ntime.perf_counter()\n• La primera llamada puede ser lenta: mide varias veces\n• Comparar la mediana\nNúmero de tokens (usage_metadata)\n• Entrada prompt_token_count\n• Salida candidates_token_count\n• Razonamiento thoughts_token_count\n• Total total_token_count\nEl razonamiento se cuenta aparte, así que entrada +\nsalida puede no coincidir con el total\nLímites de tasa\n• Límites por modelo y por proyecto, como\nsolicitudes por minuto y por día\n• Si se superan, error 429 (p. ej., 429\nRESOURCE_EXHAUSTED). Espera y reintenta\n• Consulta los límites actuales en AI Studio\nMedido en el curso (referencia): gemini-3.5-flash-lite, 15/min y 500/día; gemini-3.8-flash, 5/min y unas 10–20/día. Los límites cambian.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 8"
+          },
+          {
+            "id": "lec02-exercise-p009",
+            "title": "Errores frecuentes y precauciones",
+            "page": 9,
+            "content": "Errores frecuentes y precauciones\nRepasamos los puntos donde es fácil atascarse en los pasos y la tarea de la Clase 1.\n1\nClave de API\nNo la escribas en el código, answer.md, logs ni capturas. Si se filtra, elimínala en AI Studio y crea otra\n2\nDestino del PR\n¿Está base repository apuntando al repo del curso? Apunta al main de tu fork\n3\nCodespaces\nDetenlo al terminar. Si sigue activo, sigue consumiendo la cuota gratuita\n4\nLímites de tasa\nSi alcanzas el límite, espera o reduce el número de llamadas, e indícalo en answer.md\nLo mismo con Colab hoy: elimina el entorno de ejecución al terminar\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 9"
+          },
+          {
+            "id": "lec02-exercise-p010",
+            "title": "Conexión con la práctica de hoy",
+            "page": 10,
+            "content": "Conexión con la práctica de hoy\nEn la Clase 1 le “preguntamos” al modelo. Hoy “entrenamos” nosotros un modelo pequeño.\nClase 1\nPreguntamos a un modelo detrás de una API\nA veces respondía con seguridad incluso lo que no sabía\n→\nHoy (Clase 2)\nEntrenar un modelo pequeño con LoRA\nEl entrenamiento cambia el formato, no el juicio ante lo desconocido\nLo visto en la Clase 1, “responder lo que no sabe”, hoy lo comprobamos antes y después del entrenamiento\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 10"
+          },
+          {
+            "id": "lec02-exercise-p011",
+            "title": "Objetivos de esta sesión",
+            "page": 11,
+            "content": "Objetivos de esta sesión\nPoder explicar con tus propios resultados qué cambia y qué no con el entrenamiento.\n1\nEntrenar brevemente un modelo pequeño con\nLoRA y comprobar con cifras y salidas qué cambia\ny qué no antes y después\n2\nExplicar con tus resultados que “el formato\nse aprende, pero no se garantiza el juicio\nante lo que no sabe (pedir confirmación o\nafirmar)”\n3\nExplicar con tus palabras cuándo\nconviene y cuándo no el fine-tuning\nDurante la práctica: Google Colab (T4 GPU, cuota gratuita)\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 11"
+          },
+          {
+            "id": "lec02-exercise-p012",
+            "title": "Qué vamos a comprobar",
+            "page": 12,
+            "content": "Qué vamos a comprobar\nEl entrenamiento ajusta el formato; no necesariamente el juicio. Lo comprobamos paso a paso.\n1\nAunque el prompt indique el formato, un modelo pequeño puede no respetarlo\nSec. 3, antes\n2\nCon unos minutos de LoRA, el formato se respeta casi siempre\nSec. 5, después\n3\nAunque el formato sea correcto, no se garantiza el juicio ante preguntas fuera de la FAQ (pedir confirmación o\nafirmar sin base)\nSecciones 5 y 6\n4\nAvanzado: al cargar el mismo modelo con cuantización de 4 bits, la salida cambia sin entrenar\nSección 8 (opcional)\nSección: número de encabezado del notebook notebooks/lora_format_tuning.ipynb. Ejecuta las celdas en orden, de arriba abajo.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 12"
+          },
+          {
+            "id": "lec02-exercise-p013",
+            "title": "Material: FAQ ficticia de un curso y salida deseada",
+            "page": 13,
+            "content": "Material: FAQ ficticia de un curso y salida deseada\nSe dan la FAQ y una pregunta, y se pide la respuesta en una línea JSON. Todo el contenido de la FAQ es ficticio.\nFAQ ficticia (5 entradas)\nEntrada\nContenido (ficticio)\nFecha límite de\nentrega\n30 de septiembre, 23:59\nLugar de entrega\nSección “Tareas” del portal de aprendizaje\nFormato de entrega\n1 archivo PDF, numerodeestudiante_numerodetarea.pdf\nHorario de tutorías\nMartes, 17:00–18:00\nEntrega tardía\nSe acepta con penalización dentro de 48 horas\nSalida deseada\n{\"answer\": <cadena>, \"needs_review\":\n<booleano>}\nCon base (está en la FAQ)\nResponder con el texto de la FAQ; needs_review es false\nSin base (no está en la FAQ)\n“Esta FAQ no lo indica. Hay que consultarlo con la\norganización.” needs_review es true\nDatos ficticios: los genera el notebook. No incluyen plazos ni URL reales.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 13"
+          },
+          {
+            "id": "lec02-exercise-p014",
+            "title": "División de datos: no evaluar con frases vistas en el entrenamiento",
+            "page": 14,
+            "content": "División de datos: no evaluar con frases vistas en el entrenamiento\nLas paráfrasis se reparten en train / valid / test por plantilla.\ntrain\n14 ejemplos\n10 con base, 4 sin base. Para entrenar\nvalid\n7 ejemplos\nPlantillas distintas de train y test\ntest\n21 preguntas\n15 con base, 6 sin base. Para evaluar\nantes y después\nLas respuestas correctas van en gold: needs_review y las frases\nobligatorias no se pasan al modelo\nCantidad de entrenamiento: sin duplicar datos, se fija con el número de\népocas\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 14"
+          },
+          {
+            "id": "lec02-exercise-p015",
+            "title": "Evaluación doble: separar formato y contenido",
+            "page": 15,
+            "content": "Evaluación doble: separar formato y contenido\nSe mide con métricas distintas si respeta el formato JSON y si la respuesta es correcta.\nTasa de formato (format_rate)\n• Se puede leer como JSON\n• Exactamente 2 claves: answer y needs_review\n• Tipos: cadena y booleano\nTasa de contenido correcto (content_rate)\n• needs_review coincide con el correcto\n• answer contiene la frase correcta\nSi falta una clave, el contenido es × aunque el texto sea correcto\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 15"
+          },
+          {
+            "id": "lec02-exercise-p016",
+            "title": "Preparación previa (opcional, 5 min) y materiales",
+            "page": 16,
+            "content": "Preparación previa (opcional, 5 min) y materiales\nEjecutar una vez las secciones 0–3 antes de clase reduce los atascos el día de la práctica.\nQué comprobar en la preparación (opcional)\n• Se asigna una GPU\n• Se pueden instalar las bibliotecas\n• Se puede descargar el modelo\nEn Colab, las variables se pierden al cortarse la sesión. El día de clase,\nejecuta de nuevo desde la 0\nMateriales\n• Google Colab (T4 GPU, cuota gratuita)\n• Modelo Qwen/Qwen3.5-0.8B (Apache-2.0)\n• Notebook notebooks/lora_format_tuning.ipynb\nAbrir en Colab\nhttps://colab.research.google.com/github/matsuolab/lecture-ai-engineering-2026-es/blob/main/notebooks/lora_format_tuning.ipynb\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 16"
+          },
+          {
+            "id": "lec02-exercise-p017",
+            "title": "Práctica de 45 min (primero, solución de la tarea de la Clase 1)",
+            "page": 17,
+            "content": "Práctica de 45 min (primero, solución de la tarea de la Clase 1)\nLos primeros 5–10 min, solución de la tarea de la Clase 1; el resto, pasos 1–7.\nPaso\nQué hacer\nNotebook / tiempo aprox.\n—\nSolución de la tarea de la Clase 1\nPrimeros 5–10 min\n1\nAbrir el notebook en Colab y hacer tu propia copia\n2\nCambiar el tipo de entorno de ejecución a T4 GPU\n3\nEjecutar desde arriba y leer la tabla previa al entrenamiento\nSecciones 0–3, unos 5 min\n4\nEntrenar con LoRA. Mientras esperas, lee la diferencia entre LoRA y QLoRA\nSección 4, 4–5 min\n5\nEvaluar tras el entrenamiento y comparar con el antes. Ver las preguntas de\nconocimiento\nSecciones 5–6\n6\nCrear result.json, escribir answer.md y abrir el PR\nSección 7\n7\nDesconectar y eliminar el entorno de ejecución\nTiempo aprox. en T4: secciones 0–3, unos 5 min; secciones 4–7, unos 10 min (incluye 4–5 min de entrenamiento).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 17"
+          },
+          {
+            "id": "lec02-exercise-p018",
+            "title": "Pasos 1–2: haz tu copia y elige T4 GPU",
+            "page": 18,
+            "content": "Pasos 1–2: haz tu copia y elige T4 GPU\nCopia el notebook a tu Drive antes de ejecutarlo. Elige la GPU T4.\n1\nAbre el notebook en Colab\nFile\n→\nSave a copy in Drive\n2\nEn el notebook copiado\nRuntime\n→\nChange runtime type\n→\nT4 GPU\nSi aparece “No se encuentra la GPU”\nVuelve a elegir Runtime → Change runtime type → T4 GPU. Si hay saturación, espera un rato. Si no se asigna, sigue el método de la diapositiva\n“Si no pudiste entrenar”\nEjecuta las celdas en orden. Si te saltas alguna, aparecerá un error de “variable no encontrada”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 18"
+          },
+          {
+            "id": "lec02-exercise-p019",
+            "title": "Paso 3 | Secciones 0–3: evaluar antes del entrenamiento (unos 5 min)",
+            "page": 19,
+            "content": "Paso 3 | Secciones 0–3: evaluar antes del entrenamiento (unos 5 min)\nEn la tabla previa, mira qué claves faltan y si el texto coincide con la FAQ.\nQué mirar\n• Sección 0: la GPU aparece como Tesla T4\n• Sección 3: se carga sin cuantizar (32 bits). Memoria de pesos, p. ej., 3.01GB\n• Resumen (format_rate, content_rate, etc.) y tabla de 21 preguntas\n• Antes del entrenamiento, muchas salidas deberían carecer de needs_review\nMensajes que no son un problema\nEl ERROR: pip's dependency resolver ... en rojo de pip (cudf,\npyarrow): se puede ignorar\nYou are sending unauthenticated requests to the HF Hub: los\nmodelos públicos no requieren inicio de sesión\n... is falling back to its reference PyTorch implementation ...: no hay implementación rápida de\nla atención lineal; es más lento, pero funciona correctamente\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 19"
+          },
+          {
+            "id": "lec02-exercise-p020",
+            "title": "Paso 4 | Sección 4: entrenar con LoRA (4–5 min)",
+            "page": 20,
+            "content": "Paso 4 | Sección 4: entrenar con LoRA (4–5 min)\n20 épocas = 20 pasadas por los 14 ejemplos; 2 pasos por pasada, 40 pasos en total.\nQué mirar\nReferencia\ntrainable params ... trainable%\nSolo se entrena un pequeño % del total\nTraining Loss (cada 10 pasos)\nBaja de alrededor de 1.5 a 0.01–0.02 en 40 pasos\nTiempo de entrenamiento: ... s | Pasos: 40 |\nÉpocas: 20.0\n240–290 s en T4\nClaves de la configuración (CONFIG)\nlr 2e-4, lora_r 16, lora_alpha 32, seed 42, warmup_steps 6. Generación con do_sample: False\n(decodificación voraz para igualar condiciones antes y después)\nContenido de 1 paso\nLote 4 × acumulación de gradiente 2 = 8 ejemplos por paso. Decaimiento cosine y warmup\nMientras esperas: lee “Diferencias entre LoRA y QLoRA” en la siguiente diapositiva.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 20"
+          },
+          {
+            "id": "lec02-exercise-p021",
+            "title": "Diferencias entre LoRA y QLoRA",
+            "page": 21,
+            "content": "Diferencias entre LoRA y QLoRA\nEn ambos, los pesos del modelo fundacional se congelan y solo se entrenan matrices pequeñas añadidas (adapter).\nAspecto\nLoRA (hoy)\nQLoRA (modelo fundacional en 4 bits)\nMemoria de pesos\nGrande\nPequeña (≈1/4 de 16 bits; 7 mil millones de parámetros: ≈14GB en 16\nbits, ≈3.5GB en 4 bits)\nSalida del modelo fundacional\nSin cambios\nPuede cambiar por el error de cuantización\nVelocidad de entrenamiento\nReferencia\nNo es más rápido; a menudo, más lento\nDependencias\npeft\npeft + bitsandbytes (requiere CUDA)\nEn QLoRA, el adapter tampoco se cuantiza. Compara antes/después con la misma cuantización y registra el adapter junto con el ID, la revision y\nla cuantización del modelo fundacional.\nSi el modelo cabe en la GPU, LoRA; si no, QLoRA o un modelo más pequeño\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 21"
+          },
+          {
+            "id": "lec02-exercise-p022",
+            "title": "Paso 5 | Sección 5: evaluar tras el entrenamiento y comparar",
+            "page": 22,
+            "content": "Paso 5 | Sección 5: evaluar tras el entrenamiento y comparar\nMismas 21 preguntas y misma configuración de generación. Solo cambia si hay adapter o no.\nTabla comparativa\n¿Cómo cambiaron format_rate y\ncontent_rate antes y después?\nRegresiones\nPreguntas que pasaban antes y fallan después.\nLo esperado es que esté vacía\nTipos de fallo restantes\n• Ante una pregunta sin base, afirma\nusando otra entrada de la FAQ\n• Ante una pregunta con base, evade con\n“no lo indica”\nTras el entrenamiento: devuelve casi literalmente el texto de los datos de entrenamiento (la FAQ). Formato y redacción coinciden, pero no está\ngarantizado que aprendiera a juzgar “si la FAQ lo respalda”.\nAun fijando seed, el entrenamiento en GPU no es totalmente reproducible. Que tu compañero tenga otras preguntas fallidas no es anómalo. Compara por tipo de fallo\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 22"
+          },
+          {
+            "id": "lec02-exercise-p023",
+            "title": "Paso 5 | Sección 6: preguntas de conocimiento",
+            "page": 23,
+            "content": "Paso 5 | Sección 6: preguntas de conocimiento\nAnte algo que no está ni en la FAQ ni en los datos de entrenamiento, ¿pidió confirmación o afirmó?\nPreguntas\n3 hechos que no están en la FAQ (respuesta\ndeseada: “hay que confirmarlo”)\n• Plazo del trabajo final\n• Nombre del profesor responsable\n• Tema de la próxima clase\n1 de control: plazo de entrega de la tarea\nClasificación\nSignificado\nformat_error\nNo respeta el formato (frecuente antes del entrenamiento)\nneeds_review\nRespondió que hay que confirmarlo (deseable)\nasserted\nAfirmó con needs_review false. Si no está en la FAQ, es una\nafirmación sin base\nResultado habitual: antes, suele fallar el formato; después, pueden darse tanto “hay que confirmarlo” como afirmaciones.\nNo concluyas de antemano que “el fine-tuning nunca corrige el conocimiento”: informa del resultado con estos datos\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 23"
+          },
+          {
+            "id": "lec02-exercise-p024",
+            "title": "Pasos 6–7 | Crear y entregar result.json y eliminar el entorno",
+            "page": 24,
+            "content": "Pasos 6–7 | Crear y entregar result.json y eliminar el entorno\nEn la sección 7, crea result.json, resume lo esencial en lectures/02/answer.md y abre el PR.\nQué escribir en “Práctica” de answer.md\n• Modelo y configuración usados (de config en result.json)\n• Si ejecutaste tú el entrenamiento (executed_training_myself)\n• format_rate y content_rate antes y después\n• Preguntas con regresión\n• Fallos restantes tras el entrenamiento y su tipo\n• Resultado de las preguntas de conocimiento (clasificación antes →\ndespués)\n• Qué cambió y qué no con el entrenamiento\n1\nresult.json, eval_before.json y eval_after.json están en /content/qlora_lab. En la lista de\narchivos de la izquierda: clic derecho → descargar\n2\nResume lo esencial en lectures/02/answer.md. También puedes editarlo\nen la web de GitHub\n3\nPR desde la rama de trabajo lec02 al main de tu fork. Puedes incluir\nresult.json en lectures/02/\nPaso 7: Runtime → Disconnect and delete runtime. El tiempo de GPU gratuito de Colab es limitado\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 24"
+          },
+          {
+            "id": "lec02-exercise-p025",
+            "title": "Si no pudiste entrenar (4b del notebook)",
+            "page": 25,
+            "content": "Si no pudiste entrenar (4b del notebook)\nSi se detiene, reanúdalo. Si no puedes entrenar, usa los resultados del profesor para comparar y analizar.\nSe detuvo a mitad\nReanudar desde un checkpoint (cada 10 pasos, ckpt/)\ntrainer.train(resume_from_checkpoint=True)\nNo se asigna GPU / no termina a tiempo\nCompara y analiza con result.json, eval_before.json y eval_after.json\nque el profesor ejecutó en T4\nUbicación: lectures/02/reference/ del repo del curso. Ábrelos en\nGitHub o usa “Download raw file”\nAl entregar, pon executed_training_myself en False e indica en answer.md hasta dónde pudiste ejecutar\nCon USE_DRIVE en True en CONFIG, el adapter y los resultados se guardan también en Google Drive y se conservan aunque se corte la sesión\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 25"
+          },
+          {
+            "id": "lec02-exercise-p026",
+            "title": "Avanzado: cargar con cuantización de 4 bits (sección 8, opcional, unos 2 min)",
+            "page": 26,
+            "content": "Avanzado: cargar con cuantización de 4 bits (sección 8, opcional, unos 2 min)\nCarga el mismo modelo en 4 bits (NF4), sin entrenar, y observa los cambios en memoria y salida.\nMemoria de pesos\n32bit\n≈3GB\n→\n4bit\nMenos de\n1GB\nLos cambios en la salida no van en una sola dirección\n• Algunas preguntas mejoran\n• needs_review pasa a \"false\" (cadena) y falla la comprobación de tipos\n• Ante preguntas sin base, afirma con “sí” o “no hay”\nCómo leerlo: la diferencia con 32 bits sin entrenar es el efecto de la cuantización. bitsandbytes requiere CUDA y tarda ≈1 min en instalarse; el\ncálculo es en float16 (T4 no admite bf16).\nPara probar QLoRA: pasa por prepare_model_for_kbit_training y entrena igual que en la sección 4. Evalúa antes y después con el modelo\nfundacional en 4 bits, sin mezclar el efecto de la cuantización y el del entrenamiento.\nQLoRA, entrenando en 4 bits, también se ha probado en T4. Puedes intentarlo en la tarea\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 26"
+          },
+          {
+            "id": "lec02-exercise-p027",
+            "title": "Tarea: completa una de ellas",
+            "page": 27,
+            "content": "Tarea: completa una de ellas\nElige uno de los 3 niveles: Básico, Implementación o Avanzado.\nNivel\nContenido\nBásico\nCambia uno de lora_r, lr o num_train_epochs en CONFIG, vuelve a entrenar y registra format_rate, content_rate, loss final y tiempo de\nentrenamiento junto al original. Tras cambiarlo, haz Runtime → Restart session y ejecuta desde arriba (el modelo entrenado sigue en\nmemoria). Compara los 2 result.json\nImplementació\nn\nSustituye FAQ, GROUNDED y UNGROUNDED por tu propio tema (unas 5 entradas), entrena y compara antes y después. Reutiliza el\nformato JSON y el diseño de needs_review. Explica también cómo preparaste las preguntas “sin base”\nAvanzado\nCon scripts/make_sft_dataset.py, crea datos de Q&A (JSONL en formato messages) a partir del glosario del curso y entrena con ellos en\nlugar de la FAQ. Prepara tú las preguntas de evaluación (términos del glosario, preguntas reformuladas y términos fuera del glosario) y\nsus respuestas, y compara antes y después. Analiza ventajas y desventajas de entrenar el modelo frente a un sistema que busca en el\nglosario\nProcedimiento y precauciones: siguiente diapositiva. Entrega en la sección “Tarea” de lectures/02/answer.md.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 27"
+          },
+          {
+            "id": "lec02-exercise-p028",
+            "title": "Procedimiento y precauciones de la tarea",
+            "page": 28,
+            "content": "Procedimiento y precauciones de la tarea\nSi cambias la configuración o los datos, iguala las condiciones y vuelve a ejecutar desde arriba.\nNivel\nProcedimiento\nBásico\nTras cambiar la configuración, haz Runtime → Restart session y ejecuta desde arriba. Compara los 2 result.json\nImplementació\nn\nPrepara tú las preguntas “sin base” y explica cómo lo hiciste\nAvanzado\nEn Codespaces, ejecuta uv run python scripts/make_sft_dataset.py > glossary_sft.jsonl y sube el archivo a Colab. Cada línea tiene el\nmismo formato messages que to_chat, así que puedes pasarlo tal cual a Dataset.from_list y entrenar con el SFTTrainer de la sección 4.\nRehaz tú la evaluación (test y gold) según el glosario\nPrecaución 1: tras entrenar, la variable model también tiene el adapter insertado.\nPara volver a obtener las salidas previas, usa tuned.disable_adapter() (sección 6)\no reinicia la sesión\nPrecaución 2: las bibliotecas están fijadas a versiones probadas (PINS de la\nsección 0). Cambiarlas puede hacer que deje de funcionar\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 28"
+          },
+          {
+            "id": "lec02-exercise-p029",
+            "title": "Entrega de la tarea",
+            "page": 29,
+            "content": "Entrega de la tarea\nEscríbela en la sección “Tarea” del mismo lectures/02/answer.md de la práctica y entrégala.\nQué escribir en “Tarea” de answer.md\n• Nivel elegido (Básico / Implementación / Avanzado)\n• Configuración o datos que cambiaste\n• Resultados (tablas comparativas o cifras)\n• Reflexión sobre cuándo conviene y cuándo no el fine-tuning\nPlazo: en principio, 1 semana desde la clase\nCompletado: con uno de los niveles\nHerramientas de IA: permitidas. Escribe lo que\ncomprobaste tú\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 29"
+          },
+          {
+            "id": "lec02-exercise-p030",
+            "title": "Avance de la Clase 3",
+            "page": 30,
+            "content": "Avance de la Clase 3\nEn la Clase 3 construiremos un agente.\nHoy\nEntrenar el modelo para cambiar cómo responde\n→\nClase 3\nConstruir un “agente que busca en el glosario”\nEl contenido y la preparación de la Clase 3 se indicarán en sus materiales\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 30"
+          },
+          {
+            "id": "lec02-exercise-p031",
+            "title": "Resumen: lo logrado hoy y la próxima clase",
+            "page": 31,
+            "content": "Resumen: lo logrado hoy y la próxima clase\nComprobamos con nuestros resultados qué cambió y qué no con el entrenamiento.\n1\nEl formato cambia con unos minutos de LoRA\n2\nNo se garantiza el juicio ante lo que no sabe\n(pedir confirmación o afirmar)\n3\nExplica con tus resultados cuándo\nconviene y cuándo no el fine-tuning\nTarea: uno de Básico, Implementación o Avanzado. Plazo: en\nprincipio, 1 semana desde la clase\nClase 3: construir un agente\nElimina el entorno de ejecución de Colab al terminar\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Clase 2: práctica y tarea · PDF traducido, p. 31"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "lec03-exercise",
     "title": "Crear un agente de apoyo al aprendizaje",
     "content": [

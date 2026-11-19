@@ -4242,5 +4242,679 @@
     },
     "content_sha256": "ee683f40d4bbddcc575fbf4c9b57684194e45f262f3af6d8c3e61f64ff87b495",
     "origin": "new_translation_from_japanese"
+  },
+  "lec01-exercise-p001": {
+    "canonical_japanese_page": 1,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 1,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 1"
+    },
+    "content_sha256": "0a5b69a240b46419f161c2d88d51b641ec34d9fe4336e8ce7d2e52ca5b2609d8",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p002": {
+    "canonical_japanese_page": 2,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 2,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 2"
+    },
+    "content_sha256": "62ce68f4d1594a0dd0a27b7b276770c423b51372f956c569283279393a66cf80",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p003": {
+    "canonical_japanese_page": 3,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 3,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 3"
+    },
+    "content_sha256": "dbe6376f06aa1a8becb75dc58da5f97bfc8be6a22a4539a152d1e1f9baee89c6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p004": {
+    "canonical_japanese_page": 4,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 4,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 4"
+    },
+    "content_sha256": "6e526482726ac68c04d214c753c838a2411eba28f3daceb47dc7396308a7ae74",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p005": {
+    "canonical_japanese_page": 5,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 5,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 5"
+    },
+    "content_sha256": "2713990f243446008655e5c45eee1ef4d695887295eef361a67c2a29be2a6bec",
+    "origin": "supplied_localized_exercise_pdf",
+    "source_correction": "Course links follow the localized repository and exercise guide."
+  },
+  "lec01-exercise-p006": {
+    "canonical_japanese_page": 6,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 6,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 6"
+    },
+    "content_sha256": "a680dc2e113d5b35d2f94014b880922ad76a784282be56eede1b155eef98c5d9",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p007": {
+    "canonical_japanese_page": 7,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 7,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 7"
+    },
+    "content_sha256": "473180915c0dc9beb6838eb0dd29d28c2fbe7614609003edf99d4a0d3b8d9ad6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p008": {
+    "canonical_japanese_page": 8,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 8,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 8"
+    },
+    "content_sha256": "0d0b2316e4eabf56ff7e77b09a5741efa6dd11f6696c6feadad85e044c790503",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p009": {
+    "canonical_japanese_page": 9,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 9,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 9"
+    },
+    "content_sha256": "5980e16ebf73e95cbac37d392ccd9f9467cdc97ef33cd49ca1c6ce1f599ea770",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p010": {
+    "canonical_japanese_page": 10,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 10,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 10"
+    },
+    "content_sha256": "34c8c0df9f537787b330284ae9edb8185b4cfc3e079b7468ae3bd8da3e3d7e0b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p011": {
+    "canonical_japanese_page": 11,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 11,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 11"
+    },
+    "content_sha256": "553b982cf5fbf1ba900deb47d2dab6bf019ebe12ca99d808a1f56e9cf6415359",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p012": {
+    "canonical_japanese_page": 12,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 12,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 12"
+    },
+    "content_sha256": "678b13f7a9ecabd5b010152a7c37f4029106daad1ddec4b67712b8fad748aef9",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p013": {
+    "canonical_japanese_page": 13,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 13,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 13"
+    },
+    "content_sha256": "31e310d1207f042c23b62c4cdfbb9c75c29fb1772fe6fed83ab3370cf05178e5",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p014": {
+    "canonical_japanese_page": 14,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 14,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 14"
+    },
+    "content_sha256": "ef857f3291171b7f33b4a4f249441b92e763e712cfb06adf056c60ccadd8e32c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p015": {
+    "canonical_japanese_page": 15,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 15,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 15"
+    },
+    "content_sha256": "2d986eaa4a904543537374ff06d0564e1932d4fe4ddb8b75c7273fb3fab42055",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p016": {
+    "canonical_japanese_page": 16,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 16,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 16"
+    },
+    "content_sha256": "2b91a9aab6a16be50e3781439958e0723224a86462a9f87b02b4f84cedcadd9b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p017": {
+    "canonical_japanese_page": 17,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 17,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 17"
+    },
+    "content_sha256": "b77403cf76a5bc5d04888440d5022067ee2632ad8f09e06f754771c2fc614e7c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p018": {
+    "canonical_japanese_page": 18,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 18,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 18"
+    },
+    "content_sha256": "5a2a3a45180efc45245e91ed68b90e00cd4f6729d688a92b9425675ddc528cd0",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p019": {
+    "canonical_japanese_page": 19,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 19,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 19"
+    },
+    "content_sha256": "89720431a76fcdf5e65d9fcbaa0dd2364d7e5b21b98aa722164e681a75715750",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p020": {
+    "canonical_japanese_page": 20,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 20,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 20"
+    },
+    "content_sha256": "3998b5ec3c590b911a814a39401f2b37ff1937c4bc1e47ec92a16575ef481a38",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p021": {
+    "canonical_japanese_page": 21,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 21,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 21"
+    },
+    "content_sha256": "716ee874f73f4bee619290a283d7da9d1801e65d023ee477818bf9303e93396b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p022": {
+    "canonical_japanese_page": 22,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 22,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 22"
+    },
+    "content_sha256": "d36631fd281202879ed1995569a7e23c41a5adce16296d3e48bfc4f014cccff3",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p023": {
+    "canonical_japanese_page": 23,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 23,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 23"
+    },
+    "content_sha256": "8567db91b5f107a896337c848296e2544ac42e5acca29b7da858921c589da00c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p024": {
+    "canonical_japanese_page": 24,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 24,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 24"
+    },
+    "content_sha256": "568776594ff85834fb1965c8c6b215778a8c26631774706a4ff3bed75f0ae7c1",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p025": {
+    "canonical_japanese_page": 25,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 25,
+      "file": "Exercise Materials (7).pdf",
+      "file_sha256": "1247e2aa5c4dc1d1a11c70e05abc3757d4953e3c51f2e4eefec4f35bab8d6e4f",
+      "label": "Clase 1: práctica y tarea · PDF traducido, p. 25"
+    },
+    "content_sha256": "97fb4bdca0667bde5fd58763b4d9a17491a04aa4318604115bf953675f643db0",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p001": {
+    "canonical_japanese_page": 1,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 1,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 1"
+    },
+    "content_sha256": "11037cb391ae66ee2ce221b039b0e09e3f662cdc5f3480b907132dd8ab8bd81c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p002": {
+    "canonical_japanese_page": 2,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 2,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 2"
+    },
+    "content_sha256": "c03140b1481d131cbee9ab9eb8719e592e4f368c79029576b5cd02146ee7dcc5",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p003": {
+    "canonical_japanese_page": 3,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 3,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 3"
+    },
+    "content_sha256": "75c9a285292db8da6467c22ad4682dc2a5940a88ecca4a84ed1c56dfe61c43b5",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p004": {
+    "canonical_japanese_page": 4,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 4,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 4"
+    },
+    "content_sha256": "630887206b30e068746efb101d02e4e6f9fce2da685d853cc2a1815bd0fc57a1",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p005": {
+    "canonical_japanese_page": 5,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 5,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 5"
+    },
+    "content_sha256": "5c02b256a51dc3408b397d6d68e708a0269955549a4e68d190977763d3bf97ff",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p006": {
+    "canonical_japanese_page": 6,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 6,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 6"
+    },
+    "content_sha256": "50395fe0b38631e056bcf60094fbc5015c91ead7bae0d11296e12e2bb4497503",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p007": {
+    "canonical_japanese_page": 7,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 7,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 7"
+    },
+    "content_sha256": "58eed39d081fdb0309c0ecbfad9c0934bd9b7aaa57432e785d47b15cbea5c555",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p008": {
+    "canonical_japanese_page": 8,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 8,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 8"
+    },
+    "content_sha256": "0ac98a39378b6a39e39091011da77c7b16b71cd500ff31e2636d80b5043f969f",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p009": {
+    "canonical_japanese_page": 9,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 9,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 9"
+    },
+    "content_sha256": "44c586bb7c1721d494d03d11869a146913dff69615237429e50bf76ae6fec1e9",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p010": {
+    "canonical_japanese_page": 10,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 10,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 10"
+    },
+    "content_sha256": "f6c0225d620079ad94e412947c36bd94e9b8249450c96a7d8d84fb6b385385d7",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p011": {
+    "canonical_japanese_page": 11,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 11,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 11"
+    },
+    "content_sha256": "8d1fc1f3a1a4bb5ad85fe5c0e1c4cc5059f4febc32991ba94f2f9bdf8f01c556",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p012": {
+    "canonical_japanese_page": 12,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 12,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 12"
+    },
+    "content_sha256": "943531c3e86b1023602f5563a1da6b7b8d9db514de32aafd76bf912cb4ee6d97",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p013": {
+    "canonical_japanese_page": 13,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 13,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 13"
+    },
+    "content_sha256": "88fc1c767ce5017cbb2223e40eeed41c3a5f929691e606f6d4e675b93da2b912",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p014": {
+    "canonical_japanese_page": 14,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 14,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 14"
+    },
+    "content_sha256": "0335db0015d13150c3d9d47ebca0e42898b45aba6e13e15a8f6b6b838b892701",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p015": {
+    "canonical_japanese_page": 15,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 15,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 15"
+    },
+    "content_sha256": "ec263b32f934556c1f82219e9e8315bd1ebf00f6400664a7e03b00713be9d0cb",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p016": {
+    "canonical_japanese_page": 16,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 16,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 16"
+    },
+    "content_sha256": "c7280cac2126523b5443000ccc118d9b75e9dff9eb5ce9490ba03fe1e0181cf4",
+    "origin": "supplied_localized_exercise_pdf",
+    "source_correction": "Course links follow the localized repository and exercise guide."
+  },
+  "lec02-exercise-p017": {
+    "canonical_japanese_page": 17,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 17,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 17"
+    },
+    "content_sha256": "8112394db54467b77d498a4549d9c935c9cbbe9ce9c461922d07df871a5ab916",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p018": {
+    "canonical_japanese_page": 18,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 18,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 18"
+    },
+    "content_sha256": "31a4cd79fb9795eed35fe2ec4a45315bccad350c303558f0ce5d71ba40b28d69",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p019": {
+    "canonical_japanese_page": 19,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 19,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 19"
+    },
+    "content_sha256": "fb65127e9bc8c631e3cf5b2b92cce70ca132d38008879c1ddc43e0a29fd2c5ab",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p020": {
+    "canonical_japanese_page": 20,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 20,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 20"
+    },
+    "content_sha256": "22a585491cf231fa007493aaf8e8e7224252ec0d9bab130ac3532c0fc422450c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p021": {
+    "canonical_japanese_page": 21,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 21,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 21"
+    },
+    "content_sha256": "c38ab8a61a83982f7eb484a6eb932a8e4f86d125b1be56f2b8d0413f0339e0a4",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p022": {
+    "canonical_japanese_page": 22,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 22,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 22"
+    },
+    "content_sha256": "cd8df6077dfcc735161e8334cefa278cf8f95c92a6f1c4d1710fbdc85a308e20",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p023": {
+    "canonical_japanese_page": 23,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 23,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 23"
+    },
+    "content_sha256": "d776967da2525d8e0db8b3f4244f895940644b381d81bf7f3539464f4b0a98c6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p024": {
+    "canonical_japanese_page": 24,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 24,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 24"
+    },
+    "content_sha256": "ab5bafbac58cc549b644eb49b33ad6a308acfd7e28111daf9d45c0b8bf2cb854",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p025": {
+    "canonical_japanese_page": 25,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 25,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 25"
+    },
+    "content_sha256": "d2efa6e8431ca0e9920e71192ad3187a85f5d029a1062cce3f1368f5ad698f57",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p026": {
+    "canonical_japanese_page": 26,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 26,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 26"
+    },
+    "content_sha256": "902c7f18f31e8446e32da69d3143409fddcca01801f6dc0775a1841dd3a23a77",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p027": {
+    "canonical_japanese_page": 27,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 27,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 27"
+    },
+    "content_sha256": "c5605ac06a3039524cd4bef5716763c1ae4ebc78f8e8a4243340020170e5d642",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p028": {
+    "canonical_japanese_page": 28,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 28,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 28"
+    },
+    "content_sha256": "25a9da7d7bb91d49b5badb7f3dc122aa04e0a9eddd53712c4570721aa5c113d8",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p029": {
+    "canonical_japanese_page": 29,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 29,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 29"
+    },
+    "content_sha256": "3453a9ae6bdc14fc8669bc4322e3ae44be145ac74b8414b2bab6764561f36bf2",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p030": {
+    "canonical_japanese_page": 30,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 30,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 30"
+    },
+    "content_sha256": "73e3850615fb853e5c572997d1d2fd87b09af758def4d587d29fb9e54e6ca2a4",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p031": {
+    "canonical_japanese_page": 31,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 31,
+      "file": "Exercise Materials (2).pdf",
+      "file_sha256": "26cc6430791a4fb80e0baf02331c578917b247515a8670224ac0ac40c7b19949",
+      "label": "Clase 2: práctica y tarea · PDF traducido, p. 31"
+    },
+    "content_sha256": "9970ad321763f6103d01e6c182fa13365a3ec5b65851a94f56e3f5ea5a72fac4",
+    "origin": "supplied_localized_exercise_pdf"
   }
 }

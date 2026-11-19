@@ -1,6 +1,6 @@
 # Lecture 05: ejercicios y tarea — responder buscando en los materiales de clase
 
-La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca actualmente 6 documentos y 342 páginas. Quedan pendientes la orientación inicial y los ejercicios de Lecture 01 y 02.
+La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca 8 documentos y 398 páginas, incluidos los ejercicios de las clases 01 y 02.
 
 ## Objetivos de esta sesión
 
@@ -24,7 +24,7 @@ Usaremos la estructura de «modelo + bucle + herramientas» de Lecture 03 y camb
 | [app/agent.py](../../app/agent.py) | Instrucciones, registro de herramientas y selección del modo de ejecución |
 | [app/config.py](../../app/config.py) | Materiales seleccionados, número de resultados y alcance de la exploración Graph, entre otros ajustes |
 
-**Alcance actual**: la búsqueda vectorial, Tree y Graph usan las 214 páginas de los materiales principales de Lecture 01–03. El modo de contexto completo utiliza los 6 documentos y las 342 páginas que contiene el JSON de esta versión. En este ejercicio observaremos las distintas formas de recuperar información. Para comparar el rendimiento de los métodos en las mismas condiciones, iguala primero los materiales utilizados.
+**Alcance actual**: la búsqueda vectorial, Tree y Graph usan las 214 páginas de los materiales principales de Lecture 01–03. El modo de contexto completo utiliza los 8 documentos y las 398 páginas que contiene el JSON de esta versión. En este ejercicio observaremos las distintas formas de recuperar información. Para comparar el rendimiento de los métodos en las mismas condiciones, iguala primero los materiales utilizados.
 
 ## Preparación previa
 

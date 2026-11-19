@@ -1965,6 +1965,356 @@
       ]
     },
     {
+      "id": "lec01-exercise",
+      "kind": "document",
+      "title": "Clase 1: práctica y tarea — Configura el entorno de desarrollo y usa un LLM",
+      "children": [
+        {
+          "id": "lec01-exercise-p001",
+          "kind": "page",
+          "title": "Configura el entorno de desarrollo y usa un LLM",
+          "page": 1
+        },
+        {
+          "id": "lec01-exercise-p002",
+          "kind": "page",
+          "title": "Objetivos de esta sesión",
+          "page": 2
+        },
+        {
+          "id": "lec01-exercise-p003",
+          "kind": "page",
+          "title": "Necesitas: 2 cuentas personales",
+          "page": 3
+        },
+        {
+          "id": "lec01-exercise-p004",
+          "kind": "page",
+          "title": "Flujo de la práctica (45 min)",
+          "page": 4
+        },
+        {
+          "id": "lec01-exercise-p005",
+          "kind": "page",
+          "title": "Paso 1 Hacer fork del repo del curso",
+          "page": 5
+        },
+        {
+          "id": "lec01-exercise-p006",
+          "kind": "page",
+          "title": "Paso 2 Emitir la clave de Gemini API",
+          "page": 6
+        },
+        {
+          "id": "lec01-exercise-p007",
+          "kind": "page",
+          "title": "Paso 3 Registrar el Codespaces secret",
+          "page": 7
+        },
+        {
+          "id": "lec01-exercise-p008",
+          "kind": "page",
+          "title": "Paso 4 Iniciar Codespaces",
+          "page": 8
+        },
+        {
+          "id": "lec01-exercise-p009",
+          "kind": "page",
+          "title": "Paso 5 Preguntar al LLM",
+          "page": 9
+        },
+        {
+          "id": "lec01-exercise-p010",
+          "kind": "page",
+          "title": "Paso 5 Qué observar",
+          "page": 10
+        },
+        {
+          "id": "lec01-exercise-p011",
+          "kind": "page",
+          "title": "Paso 6 Mostrar el número de tokens con Copilot",
+          "page": 11
+        },
+        {
+          "id": "lec01-exercise-p012",
+          "kind": "page",
+          "title": "Paso 7 Crear una rama y abrir un PR",
+          "page": 12
+        },
+        {
+          "id": "lec01-exercise-p013",
+          "kind": "page",
+          "title": "Paso 8 Detener Codespaces",
+          "page": 13
+        },
+        {
+          "id": "lec01-exercise-p014",
+          "kind": "page",
+          "title": "Tarea: basta con una",
+          "page": 14
+        },
+        {
+          "id": "lec01-exercise-p015",
+          "kind": "page",
+          "title": "Entrega de la tarea y reglas",
+          "page": 15
+        },
+        {
+          "id": "lec01-exercise-p016",
+          "kind": "page",
+          "title": "Cambio de modelo y precauciones",
+          "page": 16
+        },
+        {
+          "id": "lec01-exercise-p017",
+          "kind": "page",
+          "title": "Avance de la clase 2: Fundamentos de los modelos fundacionales",
+          "page": 17
+        },
+        {
+          "id": "lec01-exercise-p018",
+          "kind": "page",
+          "title": "Resumen: logros de hoy y próxima clase",
+          "page": 18
+        },
+        {
+          "id": "lec01-exercise-p019",
+          "kind": "page",
+          "title": "Anexo",
+          "page": 19
+        },
+        {
+          "id": "lec01-exercise-p020",
+          "kind": "page",
+          "title": "¿Por qué hacen falta archivos de contexto?",
+          "page": 20
+        },
+        {
+          "id": "lec01-exercise-p021",
+          "kind": "page",
+          "title": "Archivos principales y cómo se leen",
+          "page": 21
+        },
+        {
+          "id": "lec01-exercise-p022",
+          "kind": "page",
+          "title": "Configuración mínima: qué incluir y qué no",
+          "page": 22
+        },
+        {
+          "id": "lec01-exercise-p023",
+          "kind": "page",
+          "title": "Instrucciones siempre leídas y Skill leído según la tarea",
+          "page": 23
+        },
+        {
+          "id": "lec01-exercise-p024",
+          "kind": "page",
+          "title": "Evidencia: escribirlo no siempre mejora",
+          "page": 24
+        },
+        {
+          "id": "lec01-exercise-p025",
+          "kind": "page",
+          "title": "No termina al escribirlo",
+          "page": 25
+        }
+      ]
+    },
+    {
+      "id": "lec02-exercise",
+      "kind": "document",
+      "title": "Clase 2: práctica y tarea — Aprende un formato de respuesta con LoRA y compara los resultados antes y después del entrenamiento",
+      "children": [
+        {
+          "id": "lec02-exercise-p001",
+          "kind": "page",
+          "title": "Aprende un formato de respuesta con LoRA y compara los resultados antes y después del entrenamiento",
+          "page": 1
+        },
+        {
+          "id": "lec02-exercise-p002",
+          "kind": "page",
+          "title": "Solución de la tarea de la Clase 1",
+          "page": 2
+        },
+        {
+          "id": "lec02-exercise-p003",
+          "kind": "page",
+          "title": "Básico: la misma pregunta da respuestas distintas",
+          "page": 3
+        },
+        {
+          "id": "lec02-exercise-p004",
+          "kind": "page",
+          "title": "Implementación: qué significa mantener el historial",
+          "page": 4
+        },
+        {
+          "id": "lec02-exercise-p005",
+          "kind": "page",
+          "title": "Implementación: app/ask.py antes del cambio",
+          "page": 5
+        },
+        {
+          "id": "lec02-exercise-p006",
+          "kind": "page",
+          "title": "Implementación: chat() tras el cambio (solución de ejemplo)",
+          "page": 6
+        },
+        {
+          "id": "lec02-exercise-p007",
+          "kind": "page",
+          "title": "Implementación: qué se envía en cada llamada",
+          "page": 7
+        },
+        {
+          "id": "lec02-exercise-p008",
+          "kind": "page",
+          "title": "Avanzado: tiempo de respuesta, tokens y límites de tasa",
+          "page": 8
+        },
+        {
+          "id": "lec02-exercise-p009",
+          "kind": "page",
+          "title": "Errores frecuentes y precauciones",
+          "page": 9
+        },
+        {
+          "id": "lec02-exercise-p010",
+          "kind": "page",
+          "title": "Conexión con la práctica de hoy",
+          "page": 10
+        },
+        {
+          "id": "lec02-exercise-p011",
+          "kind": "page",
+          "title": "Objetivos de esta sesión",
+          "page": 11
+        },
+        {
+          "id": "lec02-exercise-p012",
+          "kind": "page",
+          "title": "Qué vamos a comprobar",
+          "page": 12
+        },
+        {
+          "id": "lec02-exercise-p013",
+          "kind": "page",
+          "title": "Material: FAQ ficticia de un curso y salida deseada",
+          "page": 13
+        },
+        {
+          "id": "lec02-exercise-p014",
+          "kind": "page",
+          "title": "División de datos: no evaluar con frases vistas en el entrenamiento",
+          "page": 14
+        },
+        {
+          "id": "lec02-exercise-p015",
+          "kind": "page",
+          "title": "Evaluación doble: separar formato y contenido",
+          "page": 15
+        },
+        {
+          "id": "lec02-exercise-p016",
+          "kind": "page",
+          "title": "Preparación previa (opcional, 5 min) y materiales",
+          "page": 16
+        },
+        {
+          "id": "lec02-exercise-p017",
+          "kind": "page",
+          "title": "Práctica de 45 min (primero, solución de la tarea de la Clase 1)",
+          "page": 17
+        },
+        {
+          "id": "lec02-exercise-p018",
+          "kind": "page",
+          "title": "Pasos 1–2: haz tu copia y elige T4 GPU",
+          "page": 18
+        },
+        {
+          "id": "lec02-exercise-p019",
+          "kind": "page",
+          "title": "Paso 3 | Secciones 0–3: evaluar antes del entrenamiento (unos 5 min)",
+          "page": 19
+        },
+        {
+          "id": "lec02-exercise-p020",
+          "kind": "page",
+          "title": "Paso 4 | Sección 4: entrenar con LoRA (4–5 min)",
+          "page": 20
+        },
+        {
+          "id": "lec02-exercise-p021",
+          "kind": "page",
+          "title": "Diferencias entre LoRA y QLoRA",
+          "page": 21
+        },
+        {
+          "id": "lec02-exercise-p022",
+          "kind": "page",
+          "title": "Paso 5 | Sección 5: evaluar tras el entrenamiento y comparar",
+          "page": 22
+        },
+        {
+          "id": "lec02-exercise-p023",
+          "kind": "page",
+          "title": "Paso 5 | Sección 6: preguntas de conocimiento",
+          "page": 23
+        },
+        {
+          "id": "lec02-exercise-p024",
+          "kind": "page",
+          "title": "Pasos 6–7 | Crear y entregar result.json y eliminar el entorno",
+          "page": 24
+        },
+        {
+          "id": "lec02-exercise-p025",
+          "kind": "page",
+          "title": "Si no pudiste entrenar (4b del notebook)",
+          "page": 25
+        },
+        {
+          "id": "lec02-exercise-p026",
+          "kind": "page",
+          "title": "Avanzado: cargar con cuantización de 4 bits (sección 8, opcional, unos 2 min)",
+          "page": 26
+        },
+        {
+          "id": "lec02-exercise-p027",
+          "kind": "page",
+          "title": "Tarea: completa una de ellas",
+          "page": 27
+        },
+        {
+          "id": "lec02-exercise-p028",
+          "kind": "page",
+          "title": "Procedimiento y precauciones de la tarea",
+          "page": 28
+        },
+        {
+          "id": "lec02-exercise-p029",
+          "kind": "page",
+          "title": "Entrega de la tarea",
+          "page": 29
+        },
+        {
+          "id": "lec02-exercise-p030",
+          "kind": "page",
+          "title": "Avance de la Clase 3",
+          "page": 30
+        },
+        {
+          "id": "lec02-exercise-p031",
+          "kind": "page",
+          "title": "Resumen: lo logrado hoy y la próxima clase",
+          "page": 31
+        }
+      ]
+    },
+    {
       "id": "lec03-exercise",
       "kind": "document",
       "title": "Crear un agente de apoyo al aprendizaje",

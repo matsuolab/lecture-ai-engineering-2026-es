@@ -36,7 +36,7 @@ Consulta las instrucciones detalladas en [lectures/01/problem.md](lectures/01/pr
 
 ## Lecture 05: buscar en los materiales de clase
 
-La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca actualmente 6 documentos y 342 páginas. Quedan pendientes la orientación inicial y los ejercicios de Lecture 01 y 02.
+La base de búsqueda incluida abarca 214 páginas de los materiales principales de Lecture 01–03. Reutiliza los vectores de la fuente japonesa y devuelve los textos traducidos. El modo de contexto completo abarca 8 documentos y 398 páginas, incluidos los ejercicios de las clases 01 y 02.
 
 Las instrucciones de los ejercicios y la tarea están en [lectures/05/problem.md](lectures/05/problem.md). Escribe los resultados en [lectures/05/answer.md](lectures/05/answer.md).
 
