@@ -1,15 +1,20 @@
-# Lecture 06: respuestas
+# Respuestas de la clase 06
 
-## Ejercicios
+## Práctica
 
-- Nombres de herramientas que viste con `--list-tools` y diferencias con Lecture 03 (sin `--mcp`):
-- Llamadas a herramientas que viste con `--mcp --trace` (nombre y argumentos) y número de `requests`:
-- Herramientas que expusiste en el servidor MCP y sus descripciones:
-- Llamadas a herramientas al añadir el servidor fetch (nombre y argumentos):
+<!-- Pega las líneas [tool call] tal como aparecen. Deja en blanco los pasos sin terminar. -->
+
+- Nombre de la herramienta en STEP 1 —
+- STEP 2 [tool call] —
+- STEP 3 [tool call] —
+- STEP 4 [tool call] —
+- Observaciones y preguntas —
 
 ## Tarea
 
-- Nivel elegido: Básico / Implementación / Avanzado
-- Qué hiciste:
-- Resultados:
-- Observaciones y dudas:
+<!-- Completa uno de los niveles Básico, Implementación o Avanzado. -->
+
+- Nivel elegido (Básico / Implementación / Avanzado) —
+- Qué hiciste —
+- Resultados —
+- Observaciones y preguntas —

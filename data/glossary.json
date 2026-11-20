@@ -512,7 +512,7 @@
       "aliases": ["prefijo del nombre de herramienta", "prefix", "colisión de nombres"],
       "lecture": 6,
       "category": "MCP",
-      "definition": "Uso de prefijos como «nombre_del_servidor_nombre_de_herramienta» para distinguir herramientas con el mismo nombre al usar varios servidores MCP. app/agent.py añade automáticamente el nombre del servidor de la configuración (por ejemplo, glossary_search_glossary; load_mcp_toolsets de Pydantic AI hace lo mismo). Cuantas más herramientas haya, más descripciones recibe el modelo, lo que afecta a la precisión al elegir herramientas y al número de tokens.",
+      "definition": "Uso de prefijos como «nombre_del_servidor_nombre_de_herramienta» para distinguir herramientas con el mismo nombre al usar varios servidores MCP. app/mcp_agent.py añade automáticamente el nombre del servidor de la configuración (por ejemplo, glossary_search_glossary; load_mcp_toolsets de Pydantic AI hace lo mismo). Cuantas más herramientas haya, más descripciones recibe el modelo, lo que afecta a la precisión al elegir herramientas y al número de tokens.",
       "related": ["mcp-config", "tool-description", "rate-limit"]
     },
     {

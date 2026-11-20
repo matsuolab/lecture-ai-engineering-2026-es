@@ -6,10 +6,11 @@ para comprobar «si las herramientas se exponen mediante MCP, se llaman y devuel
 
 import json
 
+import pytest
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
-from app.agent import MCP_CONFIG, build_mcp_agent
+from app.mcp_agent import MCP_CONFIG, ConfigError, build_mcp_agent, describe_servers, read_config
 
 GLOSSARY_TOOL = "glossary_search_glossary"  # Lleva como prefijo el nombre del servidor "glossary" de la configuración
 
@@ -46,3 +47,37 @@ def test_glossary_result_comes_back_through_mcp(tmp_path):
     assert returns and returns[0].tool_name == GLOSSARY_TOOL
     assert str(returns[0].content).strip()  # Se devuelve el resultado de búsqueda (o «No se ha encontrado»)
     assert result.output
+
+
+def test_describe_servers_tells_command_from_url(tmp_path):
+    path = tmp_path / "mcp_servers.json"
+    path.write_text(
+        json.dumps(
+            {
+                "mcpServers": {
+                    "glossary": {"command": "uv", "args": ["run", "python", "-m", "app.mcp_server"]},
+                    "aws": {"url": "https://knowledge-mcp.global.api.aws"},
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert describe_servers(path) == [
+        '[server] glossary: inicio mediante el comando (uv run python -m app.mcp_server)',
+        '[server] aws: conexión a la URL (https://knowledge-mcp.global.api.aws)',
+    ]
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ('{"mcpServers": {"a": {"command": "uv"} "b": {"url": "https://example.com"}}}', 'JSON\\ no\\ válido\\ cerca\\ de\\ la\\ línea\\ 1'),
+        ('{"servers": {}}', 'Falta\\ "mcpServers"'),
+        ('{"mcpServers": {"a": {"args": []}}}', 'El\\ servidor\\ "a"\\ necesita\\ "command"\\ o\\ "url"'),
+    ],
+)
+def test_config_mistakes_are_reported_in_words(tmp_path, text, expected):
+    path = tmp_path / "mcp_servers.json"
+    path.write_text(text, encoding="utf-8")
+    with pytest.raises(ConfigError, match=expected):
+        read_config(path)

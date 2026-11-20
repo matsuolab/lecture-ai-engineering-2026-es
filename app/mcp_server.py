@@ -1,16 +1,15 @@
-"""Lecture 06: ofrecer el glosario y los puntos clave de las sesiones mediante un servidor MCP.
+"""Servidor MCP del glosario y los resúmenes de la clase 06.
 
-Uso:
-    uv run python -m app.agent --mcp --list-tools   # Listar las herramientas de este servidor (sin clave API)
-    uv run python -m app.mcp_server --http          # Iniciar con Streamable HTTP (http://127.0.0.1:8000/mcp)
+    uv run python -m app.mcp_agent --list-tools
+    uv run python -m app.mcp_server --http
 
-Sin argumentos, espera conexiones por stdio (entrada y salida estándar). Está pensado para que un
-cliente MCP (--mcp de app.agent o Copilot Chat) lo inicie como subproceso; si lo ejecutas manualmente,
-parecerá detenido mientras espera la entrada.
+El primer comando lista las herramientas sin clave API. El segundo inicia
+Streamable HTTP en http://127.0.0.1:8000/mcp.
 
-En Lecture 03 registramos directamente las funciones de tools.py en agent.py. Con un servidor MCP,
-las mismas funciones pueden usarse mediante un procedimiento común desde otros clientes además de
-Pydantic AI, como Copilot Chat.
+De forma predeterminada, el servidor espera datos por stdio. Los clientes MCP
+como app.mcp_agent lo lanzan como subproceso. Si lo ejecutas directamente,
+queda a la espera. Las funciones registradas en la clase 03 están disponibles
+a través del mismo protocolo para el agente y para otros clientes MCP.
 """
 
 import argparse
@@ -28,8 +27,7 @@ server = MCPServer(
 # Ofrece las mismas funciones de Lecture 03 como herramientas MCP. Los docstrings y las anotaciones de tipos forman la descripción
 server.tool()(tools.search_glossary)
 
-# TODO(Lecture 06: ejercicio): expón también tools.get_lecture_summary (igual que en la línea anterior)
-# Si creaste make_quiz en Lecture 03, también puedes exponerla
+# TODO(Tarea básica): expón también get_lecture_summary
 
 
 def main() -> None:
